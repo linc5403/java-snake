@@ -1440,46 +1440,46 @@ public static void main(String[] args) {
   - 例如：初始方向为向左，瞬间依次按下向上、向下、向左按键，此时应该向左行进
 
 #+begin_src java
-@Override
-public void keyPressed(KeyEvent e) {
-   int keyCode = e.getKeyCode();
+  @Override
+  public void keyPressed(KeyEvent e) {
+     int keyCode = e.getKeyCode();
 
-   switch (keyCode) {
-       case KeyEvent.VK_UP:
-           grid.changeDirection(Direction.UP);
-           break;
-       case KeyEvent.VK_DOWN:
-           grid.changeDirection(Direction.DOWN);
-           break;
-       case KeyEvent.VK_LEFT:
-           grid.changeDirection(Direction.LEFT);
-           break;
-       case KeyEvent.VK_RIGHT:
-           grid.changeDirection(Direction.RIGHT);
-           break;
-       default:
-   }
+     switch (keyCode) {
+	 case KeyEvent.VK_UP:
+	     grid.changeDirection(Direction.UP);
+	     break;
+	 case KeyEvent.VK_DOWN:
+	     grid.changeDirection(Direction.DOWN);
+	     break;
+	 case KeyEvent.VK_LEFT:
+	     grid.changeDirection(Direction.LEFT);
+	     break;
+	 case KeyEvent.VK_RIGHT:
+	     grid.changeDirection(Direction.RIGHT);
+	     break;
+	 default:
+     }
 
-   // your code here：处理回车键，重新开始游戏
-}
+     // your code here：处理回车键，重新开始游戏
+  }
 
-/**
-* 按一定速率自动移动贪吃蛇
-*/
-public void run() {
 
-   while (running) {
-       try {
-           Thread.sleep(Settings.DEFAULT_MOVE_INTERVAL);
-       } catch (InterruptedException e) {
-           break;
-       }
+  //按一定速率自动移动贪吃蛇
 
-       // 进入游戏下一步
-       // 如果结束，则退出游戏
-       // 如果继续，则绘制新的游戏页面
-       // your code here
-   }
+  public void run() {
 
-}
+     while (running) {
+	 try {
+	     Thread.sleep(Settings.DEFAULT_MOVE_INTERVAL);
+	 } catch (InterruptedException e) {
+	     break;
+	 }
+
+	 // 进入游戏下一步
+	 // 如果结束，则退出游戏
+	 // 如果继续，则绘制新的游戏页面
+	 // your code here
+     }
+
+  }
 #+end_src
