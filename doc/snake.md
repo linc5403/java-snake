@@ -1,60 +1,60 @@
 
 # Table of Contents
 
-1.  [总体设计](#org69a8213)
-    1.  [练习之前](#org8bce971)
-    2.  [开始设计](#orgec5b829)
-    3.  [表达虚拟概念的类](#orgb695b16)
-    4.  [总结](#orgdbac916)
-    5.  [练习](#orgf48208f)
-2.  [贪吃蛇的方向](#orgba1aed6)
-    1.  [使用枚举定义Direction](#orgee0069b)
-    2.  [枚举的使用](#org6345b93)
-    3.  [给枚举添加成员变量、方法和构造函数](#org1a8f3a6)
-    4.  [枚举的其它特性](#org685fc16)
-    5.  [练习](#orgbd48093)
-3.  [如何定义一只贪吃蛇？集合类的使用](#org1b2ac7c)
-    1.  [如何设计一个类](#orgfb8a767)
-    2.  [设计成员变量](#orge6e343f)
-    3.  [选择数据结构](#org59500ad)
-    4.  [设计方法](#org87c4f25)
-    5.  [定义意义明确的私有方法](#orgc4c2a94)
-    6.  [练习](#org6980aaf)
-4.  [贪吃蛇的地盘：用Grid类定义关键算法](#orge53b4b5)
-    1.  [Grid的数据成员](#orga9e1539)
-    2.  [Grid的构造函数](#orgfdfe431)
-    3.  [关键方法：初始化贪吃蛇](#orgcb95e09)
-    4.  [关键方法：随机创建食物](#orgde93faf)
-    5.  [关键方法：一次移动](#org53841f6)
-    6.  [练习](#org06c6c3b)
-5.  [编写界面：Swing和Graphics](#org868ac73)
-    1.  [应用界面](#orgb62752d)
-    2.  [一个简单的Swing程序](#org9468b78)
-    3.  [SnakeApp的实现](#org61e5d86)
-    4.  [Graphics API](#org7249af7)
-    5.  [在窗口中显示界面](#orgdfb0594)
-    6.  [练习](#org3a00cbb)
-6.  [交互的处理：用GameController协调界面与模型](#orgbf4953a)
-    1.  [GameController的作用](#org34a1687)
-    2.  [接收键盘事件](#org0bf7632)
-    3.  [处理键盘事件](#org7544502)
-    4.  [练习](#org049bec2)
-7.  [让贪吃蛇自己动起来：Thread的使用](#orgb03bdc2)
-    1.  [如何让贪吃蛇移动起来](#orgc129faa)
-    2.  [多线程的基础知识](#orgf863396)
-    3.  [实现游戏线程](#orgf1f4fcd)
-    4.  [启动线程](#orga134241)
-    5.  [在EDT中启动应用](#org2877e51)
-    6.  [更进一步](#org43ebbf5)
-    7.  [练习](#orge56af9a)
+1.  [总体设计](#org4d913d4)
+    1.  [练习之前](#org09dd2b8)
+    2.  [开始设计](#orgf7407a7)
+    3.  [表达虚拟概念的类](#org14864e6)
+    4.  [总结](#org687ff07)
+    5.  [练习](#orgee2cd43)
+2.  [贪吃蛇的方向](#org95f5d95)
+    1.  [使用枚举定义Direction](#org1c7b7ae)
+    2.  [枚举的使用](#org3eff55f)
+    3.  [给枚举添加成员变量、方法和构造函数](#org3411fad)
+    4.  [枚举的其它特性](#org062d20a)
+    5.  [练习](#orga11beec)
+3.  [如何定义一只贪吃蛇？集合类的使用](#org7491fe8)
+    1.  [如何设计一个类](#org03f8c5c)
+    2.  [设计成员变量](#orga688923)
+    3.  [选择数据结构](#org55707fd)
+    4.  [设计方法](#org627a080)
+    5.  [定义意义明确的私有方法](#org0e993dd)
+    6.  [练习](#org9d5e97a)
+4.  [贪吃蛇的地盘：用Grid类定义关键算法](#org610c86a)
+    1.  [Grid的数据成员](#orge4f87c7)
+    2.  [Grid的构造函数](#orgf796e6d)
+    3.  [关键方法：初始化贪吃蛇](#orge4f1d27)
+    4.  [关键方法：随机创建食物](#org741393c)
+    5.  [关键方法：一次移动](#orgf40793e)
+    6.  [练习](#orgce74e9b)
+5.  [编写界面：Swing和Graphics](#orgc1666da)
+    1.  [应用界面](#org9f243d5)
+    2.  [一个简单的Swing程序](#org5058021)
+    3.  [SnakeApp的实现](#org97b367a)
+    4.  [Graphics API](#orgf23b876)
+    5.  [在窗口中显示界面](#orgbb7b76f)
+    6.  [练习](#org2ca68c3)
+6.  [交互的处理：用GameController协调界面与模型](#org035f0a6)
+    1.  [GameController的作用](#org7ea54dc)
+    2.  [接收键盘事件](#orgcbf4bd0)
+    3.  [处理键盘事件](#org59eabd9)
+    4.  [练习](#orgc44257d)
+7.  [让贪吃蛇自己动起来：Thread的使用](#org200f3a7)
+    1.  [如何让贪吃蛇移动起来](#org2ec89ca)
+    2.  [多线程的基础知识](#orgc816252)
+    3.  [实现游戏线程](#orge17d04b)
+    4.  [启动线程](#org0a8cf11)
+    5.  [在EDT中启动应用](#org0fb26b8)
+    6.  [更进一步](#org8d8d638)
+    7.  [练习](#org01ad49b)
 
 
-<a id="org69a8213"></a>
+<a id="org4d913d4"></a>
 
 # 总体设计
 
 
-<a id="org8bce971"></a>
+<a id="org09dd2b8"></a>
 
 ## 练习之前
 
@@ -72,7 +72,7 @@
 所以贪吃蛇应用非常适合入门Java编程的同学。通过在天码营的练习，可以了解用面向对象的方式来编程解决问题，学习如何设计类，如何选择数据结构以及Java Swing的基础知识。练习任务有的会很简单，有的的稍有难度，完成之后，你会发现你对于Java SE编程会有更深入的掌握。
 
 
-<a id="orgec5b829"></a>
+<a id="orgf7407a7"></a>
 
 ## 开始设计
 
@@ -112,7 +112,7 @@ Grid还有长度和宽度等属性，可以建立构造函数。面向对象的�
 这些类内部定义基本还没有，不过没关系，在练习过程中就会慢慢充实起来。
 
 
-<a id="orgb695b16"></a>
+<a id="org14864e6"></a>
 
 ## 表达虚拟概念的类
 
@@ -143,7 +143,7 @@ GameController的职责在于接收窗体SnakeApp传递过来的有意义的事�
 最终的类设计并非如此，这只是一个最初的概览，后面我们不仅仅会充实类，而且会增加一些新的类。
 
 
-<a id="orgdbac916"></a>
+<a id="org687ff07"></a>
 
 ## 总结
 
@@ -157,7 +157,7 @@ GameController的职责在于接收窗体SnakeApp传递过来的有意义的事�
 -   定义构造函数
 
 
-<a id="orgf48208f"></a>
+<a id="orgee2cd43"></a>
 
 ## 练习
 
@@ -176,7 +176,7 @@ GameController的职责在于接收窗体SnakeApp传递过来的有意义的事�
 -   定义访问内部成员变量的方法（Getter方法）：getWidth、getHeight和getSnake
 
 
-<a id="orgba1aed6"></a>
+<a id="org95f5d95"></a>
 
 # 贪吃蛇的方向
 
@@ -198,7 +198,7 @@ GameController的职责在于接收窗体SnakeApp传递过来的有意义的事�
 > Enum本质上是一种特殊的类，可以有更多丰富的操作，相比使用静态常量而言功能更加强大，而且具有更好的维护性。
 
 
-<a id="orgee0069b"></a>
+<a id="org1c7b7ae"></a>
 
 ## 使用枚举定义Direction
 
@@ -219,7 +219,7 @@ GameController的职责在于接收窗体SnakeApp传递过来的有意义的事�
 其实UP、RIGHT等枚举值默认就是public、static和final的。
 
 
-<a id="org6345b93"></a>
+<a id="org3eff55f"></a>
 
 ## 枚举的使用
 
@@ -260,7 +260,7 @@ GameController的职责在于接收窗体SnakeApp传递过来的有意义的事�
     LEFT
 
 
-<a id="org1a8f3a6"></a>
+<a id="org3411fad"></a>
 
 ## 给枚举添加成员变量、方法和构造函数
 
@@ -303,7 +303,7 @@ GameController的职责在于接收窗体SnakeApp传递过来的有意义的事�
 这时枚举的定义就可以调用新的构造函数了，传入一个整数值来初始化directionCode，比如 `UP(0)` 就表示向上的方向的整数代码为0。
 
 
-<a id="org685fc16"></a>
+<a id="org062d20a"></a>
 
 ## 枚举的其它特性
 
@@ -316,7 +316,7 @@ GameController的职责在于接收窗体SnakeApp传递过来的有意义的事�
 -   枚举可以实现接口，但是不能继承，原因在于任何枚举已经继承自java.lang.Enum，而Java是不支持多继承的。
 
 
-<a id="orgbd48093"></a>
+<a id="orga11beec"></a>
 
 ## 练习
 
@@ -332,12 +332,12 @@ GameController的职责在于接收窗体SnakeApp传递过来的有意义的事�
     }
 
 
-<a id="org1b2ac7c"></a>
+<a id="org7491fe8"></a>
 
 # 如何定义一只贪吃蛇？集合类的使用
 
 
-<a id="orgfb8a767"></a>
+<a id="org03f8c5c"></a>
 
 ## 如何设计一个类
 
@@ -351,7 +351,7 @@ GameController的职责在于接收窗体SnakeApp传递过来的有意义的事�
 现在我们来考虑如何编写Snake类。
 
 
-<a id="orge6e343f"></a>
+<a id="orga688923"></a>
 
 ## 设计成员变量
 
@@ -385,7 +385,7 @@ GameController的职责在于接收窗体SnakeApp传递过来的有意义的事�
 > 成员变量x和y构成了一个Node的状态。注意这两个成员变量使用final修饰了，表示进行初始赋值之后就不能改变。
 
 
-<a id="org59500ad"></a>
+<a id="org55707fd"></a>
 
 ## 选择数据结构
 
@@ -421,7 +421,7 @@ GameController的职责在于接收窗体SnakeApp传递过来的有意义的事�
     }
 
 
-<a id="org87c4f25"></a>
+<a id="org627a080"></a>
 
 ## 设计方法
 
@@ -475,7 +475,7 @@ eat和move方法都给出了详细的处理流程，来动手练习一下吧。
 ![img](img/move.png)
 
 
-<a id="orgc4c2a94"></a>
+<a id="org0e993dd"></a>
 
 ## 定义意义明确的私有方法
 
@@ -508,7 +508,7 @@ eat和move方法都给出了详细的处理流程，来动手练习一下吧。
 如果你说可以加注释的话，那么你想想让方法命名本身就成为有意义的“注释”是不是一种更好的方式呢？
 
 
-<a id="org6980aaf"></a>
+<a id="org9d5e97a"></a>
 
 ## 练习
 
@@ -548,12 +548,12 @@ eat和move方法都给出了详细的处理流程，来动手练习一下吧。
      }
 
 
-<a id="orge53b4b5"></a>
+<a id="org610c86a"></a>
 
 # 贪吃蛇的地盘：用Grid类定义关键算法
 
 
-<a id="orga9e1539"></a>
+<a id="orge4f87c7"></a>
 
 ## Grid的数据成员
 
@@ -601,7 +601,7 @@ eat和move方法都给出了详细的处理流程，来动手练习一下吧。
     }
 
 
-<a id="orgfdfe431"></a>
+<a id="orgf796e6d"></a>
 
 ## Grid的构造函数
 
@@ -657,7 +657,7 @@ eat和move方法都给出了详细的处理流程，来动手练习一下吧。
 接下来看initSnake()和createFood()如何实现。
 
 
-<a id="orgcb95e09"></a>
+<a id="orge4f1d27"></a>
 
 ## 关键方法：初始化贪吃蛇
 
@@ -681,7 +681,7 @@ eat和move方法都给出了详细的处理流程，来动手练习一下吧。
     }
 
 
-<a id="orgde93faf"></a>
+<a id="org741393c"></a>
 
 ## 关键方法：随机创建食物
 
@@ -702,7 +702,7 @@ eat和move方法都给出了详细的处理流程，来动手练习一下吧。
     }
 
 
-<a id="org53841f6"></a>
+<a id="orgf40793e"></a>
 
 ## 关键方法：一次移动
 
@@ -743,7 +743,7 @@ eat和move方法都给出了详细的处理流程，来动手练习一下吧。
 这个方法将来在处理用户的键盘输入时需要用到。我们之前实现的 `Direction.compatibleWith()` 方法在这个时候派上用场了。
 
 
-<a id="org06c6c3b"></a>
+<a id="orgce74e9b"></a>
 
 ## 练习
 
@@ -775,12 +775,12 @@ eat和move方法都给出了详细的处理流程，来动手练习一下吧。
     }
 
 
-<a id="org868ac73"></a>
+<a id="orgc1666da"></a>
 
 # 编写界面：Swing和Graphics
 
 
-<a id="orgb62752d"></a>
+<a id="org9f243d5"></a>
 
 ## 应用界面
 
@@ -793,7 +793,7 @@ Swing编程是一个比较大的主题，这里我们只介绍能够实现贪吃
 在第一个练习中，我们提到过MVC模式（ `Model-View-Controller` ）。下面要实现的就是View了。这个练习做完之后，你应该可以看到一条贪吃蛇静静地躺在棋盘上。
 
 
-<a id="org9468b78"></a>
+<a id="org5058021"></a>
 
 ## 一个简单的Swing程序
 
@@ -834,7 +834,7 @@ JFrame： GUI应用的窗口对象，能够最大化、最小化和关闭，它�
 -   DISPOSE<sub>ON</sub><sub>CLOSE</sub>：隐藏并释放窗体，相当于调用dispose()，最后一个窗口被释放后程序运行结束
 
 
-<a id="org61e5d86"></a>
+<a id="org97b367a"></a>
 
 ## SnakeApp的实现
 
@@ -872,7 +872,7 @@ JFrame： GUI应用的窗口对象，能够最大化、最小化和关闭，它�
 你现在不需要细读这些文档，先来了解基本原理和关键知识。
 
 
-<a id="org7249af7"></a>
+<a id="orgf23b876"></a>
 
 ## Graphics API
 
@@ -970,7 +970,7 @@ JFrame： GUI应用的窗口对象，能够最大化、最小化和关闭，它�
 >     drawImage(Image img, int xTopLeft, int yTopLeft, int width, int height, ImageObserver o);  // resize image on screen
 
 
-<a id="orgdfb0594"></a>
+<a id="orgbb7b76f"></a>
 
 ## 在窗口中显示界面
 
@@ -1079,7 +1079,7 @@ GameView新增了一个JPanel类型的成员变量canvas
 好了，一条呆萌的贪吃蛇已经静静躺在漆黑一片的棋盘中了。
 
 
-<a id="org3a00cbb"></a>
+<a id="org2ca68c3"></a>
 
 ## 练习
 
@@ -1141,12 +1141,12 @@ GameView新增了一个JPanel类型的成员变量canvas
     }
 
 
-<a id="orgbf4953a"></a>
+<a id="org035f0a6"></a>
 
 # 交互的处理：用GameController协调界面与模型
 
 
-<a id="org34a1687"></a>
+<a id="org7ea54dc"></a>
 
 ## GameController的作用
 
@@ -1165,7 +1165,7 @@ GameView新增了一个JPanel类型的成员变量canvas
 模型和视图已经基本完成了，我们在界面中画出了贪吃蛇以及它的食物，现在，让我们学习如何通过键盘操作让贪吃蛇动起来。这就需要GameController粉墨登场了。
 
 
-<a id="org0bf7632"></a>
+<a id="orgcbf4bd0"></a>
 
 ## 接收键盘事件
 
@@ -1215,7 +1215,7 @@ keyReleased()和keyTyped()方法不需要用到，我们只需要在keyPressed()
     window.addKeyListener(gameController);
 
 
-<a id="org7544502"></a>
+<a id="org59eabd9"></a>
 
 ## 处理键盘事件
 
@@ -1244,7 +1244,7 @@ keyReleased()和keyTyped()方法不需要用到，我们只需要在keyPressed()
 处理好所有影响游戏状态的事件，你已经拥有了一只跟着你按键移动的贪吃蛇，不过你不按键它是静止不动的，你离完成一个完整的贪吃蛇游戏只差最后一步了。
 
 
-<a id="org049bec2"></a>
+<a id="orgc44257d"></a>
 
 ## 练习
 
@@ -1286,12 +1286,12 @@ keyReleased()和keyTyped()方法不需要用到，我们只需要在keyPressed()
         }
 
 
-<a id="orgb03bdc2"></a>
+<a id="org200f3a7"></a>
 
 # 让贪吃蛇自己动起来：Thread的使用
 
 
-<a id="orgc129faa"></a>
+<a id="org2ec89ca"></a>
 
 ## 如何让贪吃蛇移动起来
 
@@ -1321,7 +1321,7 @@ Settings.DEFAULT<sub>MOVE</sub><sub>INTERVAL的值为200</sub>，这样玩家每
 所以接下来你需要了解一点多线程编程的知识了。
 
 
-<a id="orgf863396"></a>
+<a id="orgc816252"></a>
 
 ## 多线程的基础知识
 
@@ -1370,7 +1370,7 @@ Settings.DEFAULT<sub>MOVE</sub><sub>INTERVAL的值为200</sub>，这样玩家每
 > 注意还有其它更高级的方式来创建线程，比如ExecutorSevice，有兴趣的同学可以进一步深入。
 
 
-<a id="orgf1f4fcd"></a>
+<a id="orge17d04b"></a>
 
 ## 实现游戏线程
 
@@ -1423,7 +1423,7 @@ run()函数中的核心逻辑是典型的控制器（Controller）逻辑：
 这里简单弹出一个显示游戏结束信息的对话框。
 
 
-<a id="orga134241"></a>
+<a id="org0a8cf11"></a>
 
 ## 启动线程
 
@@ -1438,7 +1438,7 @@ run()函数中的核心逻辑是典型的控制器（Controller）逻辑：
     new Thread(gameController).start();
 
 
-<a id="org2877e51"></a>
+<a id="org0fb26b8"></a>
 
 ## 在EDT中启动应用
 
@@ -1457,7 +1457,7 @@ EDT（Event Dispatching Thread，字面上翻译成“事件分配线程”）�
 需要注意的是，多线程程序往往涉及到线程同步的问题，多个线程同时访问一个变量会影响业务逻辑时，就需要专门的同步处理。在贪吃蛇应用中，事件处理线程和这次练习实现的GameController线程都会访问Grid的direction变量，只不过访问和修改的顺序对游戏并没有什么影响，所以我们可以不做同步处理。
 
 
-<a id="org43ebbf5"></a>
+<a id="org8d8d638"></a>
 
 ## 更进一步
 
@@ -1474,7 +1474,7 @@ EDT（Event Dispatching Thread，字面上翻译成“事件分配线程”）�
 所以贪吃蛇应用非常适合入门Java编程的同学。通过在半圆的练习，可以了解用面向对象的方式来编程解决问题，学习如何设计类，如何选择数据结构、Java Swing编程和多线程编程的基础知识。这中间也涉及很多Java编程经常碰到的问题，比如匿名类和回调方法等，你会发现你对于Java SE编程会有更深入的掌握。
 
 
-<a id="orge56af9a"></a>
+<a id="org01ad49b"></a>
 
 ## 练习
 
@@ -1490,6 +1490,7 @@ EDT（Event Dispatching Thread，字面上翻译成“事件分配线程”）�
     -   例如：初始方向为向左，瞬间依次按下向上、向下按键，此时应该向下行进
     -   例如：初始方向为向左，瞬间依次按下向上、向下、向左按键，此时应该向左行进
 
+    
     @Override
     public void keyPressed(KeyEvent e) {
        int keyCode = e.getKeyCode();

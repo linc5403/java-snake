@@ -1439,9 +1439,8 @@ public static void main(String[] args) {
   - 例如：初始方向为向左，瞬间依次按下向上、向下按键，此时应该向下行进
   - 例如：初始方向为向左，瞬间依次按下向上、向下、向左按键，此时应该向左行进
 
+#+begin_example
 
-
-#+begin_src java
   @Override
   public void keyPressed(KeyEvent e) {
      int keyCode = e.getKeyCode();
@@ -1482,4 +1481,5 @@ public static void main(String[] args) {
      }
 
   }
-#+end_src
+
+#+end_example
