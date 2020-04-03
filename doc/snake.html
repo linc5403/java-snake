@@ -1,0 +1,2333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-04-03 Fri 19:10 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="lin chuan" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc548dfc">1. 总体设计</a>
+<ul>
+<li><a href="#org9f799e9">1.1. 练习之前</a></li>
+<li><a href="#orga1ffc8b">1.2. 开始设计</a></li>
+<li><a href="#org967b7d5">1.3. 表达虚拟概念的类</a></li>
+<li><a href="#org70a6e61">1.4. 总结</a></li>
+<li><a href="#org98c36dd">1.5. 练习</a></li>
+</ul>
+</li>
+<li><a href="#org63984d0">2. 贪吃蛇的方向</a>
+<ul>
+<li><a href="#orgcc6d20b">2.1. 使用枚举定义Direction</a></li>
+<li><a href="#org2b66072">2.2. 枚举的使用</a></li>
+<li><a href="#orgd397ee8">2.3. 给枚举添加成员变量、方法和构造函数</a></li>
+<li><a href="#org6dcd502">2.4. 枚举的其它特性</a></li>
+<li><a href="#org0fc9798">2.5. 练习</a></li>
+</ul>
+</li>
+<li><a href="#org966430e">3. 如何定义一只贪吃蛇？集合类的使用</a>
+<ul>
+<li><a href="#org9426348">3.1. 如何设计一个类</a></li>
+<li><a href="#orgd51c6a9">3.2. 设计成员变量</a></li>
+<li><a href="#orgb745ff3">3.3. 选择数据结构</a></li>
+<li><a href="#org1681f4e">3.4. 设计方法</a></li>
+<li><a href="#org5ed428a">3.5. 定义意义明确的私有方法</a></li>
+<li><a href="#org96b5f1d">3.6. 练习</a></li>
+</ul>
+</li>
+<li><a href="#org2cc4daa">4. 贪吃蛇的地盘：用Grid类定义关键算法</a>
+<ul>
+<li><a href="#orge877487">4.1. Grid的数据成员</a></li>
+<li><a href="#orgb95860f">4.2. Grid的构造函数</a></li>
+<li><a href="#orgf9cb4c2">4.3. 关键方法：初始化贪吃蛇</a></li>
+<li><a href="#org0ab5f17">4.4. 关键方法：随机创建食物</a></li>
+<li><a href="#org9701c19">4.5. 关键方法：一次移动</a></li>
+<li><a href="#org36987bc">4.6. 练习</a></li>
+</ul>
+</li>
+<li><a href="#org5216a68">5. 编写界面：Swing和Graphics</a>
+<ul>
+<li><a href="#org066a6e9">5.1. 应用界面</a></li>
+<li><a href="#org0ab381b">5.2. 一个简单的Swing程序</a></li>
+<li><a href="#org44fb2fa">5.3. SnakeApp的实现</a></li>
+<li><a href="#org573fd38">5.4. Graphics API</a></li>
+<li><a href="#org56731c4">5.5. 在窗口中显示界面</a></li>
+<li><a href="#org2bfec25">5.6. 练习</a></li>
+</ul>
+</li>
+<li><a href="#org5279cfc">6. 交互的处理：用GameController协调界面与模型</a>
+<ul>
+<li><a href="#org9ad098c">6.1. GameController的作用</a></li>
+<li><a href="#org67fee02">6.2. 接收键盘事件</a></li>
+<li><a href="#orgd373264">6.3. 处理键盘事件</a></li>
+<li><a href="#org031f0f9">6.4. 练习</a></li>
+</ul>
+</li>
+<li><a href="#orgeb865db">7. 让贪吃蛇自己动起来：Thread的使用</a>
+<ul>
+<li><a href="#orge881fea">7.1. 如何让贪吃蛇移动起来</a></li>
+<li><a href="#orgde3cf6c">7.2. 多线程的基础知识</a></li>
+<li><a href="#orgea86f74">7.3. 实现游戏线程</a></li>
+<li><a href="#org996bde4">7.4. 启动线程</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc548dfc" class="outline-2">
+<h2 id="orgc548dfc"><span class="section-number-2">1</span> 总体设计</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org9f799e9" class="outline-3">
+<h3 id="org9f799e9"><span class="section-number-3">1.1</span> 练习之前</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+在网上能找到不少贪吃蛇的代码，但是往往写得比较乱，甚至有所有代码都包含在一个类中的情况，对于初学者而言即使能Copy后跑起来，也不一定能够真正理解代码的逻辑。
+</p>
+
+<p>
+实际上实现贪吃蛇的代码并不复杂，如果尝试去给出优雅地实现，比如写出具有清晰的类结构，有助于真正提高大家程序设计的基本功。
+</p>
+
+<p>
+此外，应该让代码具有良好的扩展性，将来你希望更新你的贪吃蛇应用时，比如:
+</p>
+
+<ul class="org-ul">
+<li>让贪吃蛇显示出不同的样子</li>
+<li>增加或者修改积分规则</li>
+</ul>
+
+<p>
+应该要做到修改尽量少的代码。实际的应用都是不断演化的，良好的设计能够让应用更易于维护。
+</p>
+
+<p>
+所以贪吃蛇应用非常适合入门Java编程的同学。通过在天码营的练习，可以了解用面向对象的方式来编程解决问题，学习如何设计类，如何选择数据结构以及Java Swing的基础知识。练习任务有的会很简单，有的的稍有难度，完成之后，你会发现你对于Java SE编程会有更深入的掌握。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga1ffc8b" class="outline-3">
+<h3 id="orga1ffc8b"><span class="section-number-3">1.2</span> 开始设计</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Java是一门面向对象语言，一个Java程序就是一系列对象（Object）的集合，对象通过方法调用来彼此协作完成特定的功能。面向对象是一种非常符合人类思维的编程方法，因为现实世界就是由对象和对象之间的交互来构成的，所以我们其实很容易将现实世界映射到软件开发中。我们可以把Java语言当成是一门普通的语言，学习英语是为了与世界交流，而学习Java就是与计算机交流。我们需要把自己的思维，通过Java语言表达出来，让计算机理解。
+</p>
+
+<p>
+那现在我们怎么用Java，用面向对象的思维，来表达出贪吃蛇这个游戏呢？
+</p>
+
+<p>
+贪吃蛇游戏的规则无需多言，我们马上能想到两个对象，一条蛇和一个棋盘，我们可以定义两个类：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">Snake</span> {
+
+}
+<span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">Grid</span> {
+
+}
+</pre>
+</div>
+
+<p>
+棋盘里有一条蛇，这其实就是棋盘和蛇的关系，所以可以给棋盘定义一个成员变量，类型为Snake，Grid的代码变为：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">Grid</span> {
+    <span style="color: #a020f0;">private</span> <span style="color: #228b22;">Snake</span> <span style="color: #a0522d;">snake</span>;
+}
+</pre>
+</div>
+
+<p>
+Grid还有长度和宽度等属性，可以建立构造函数。面向对象的知识大家可以复习Java面向对象基础。
+</p>
+
+<p>
+用面向对象建模语言UML来表达这两个类的关系如下：
+</p>
+
+
+<div class="figure">
+<p><object type="image/svg+xml" data="./img/class.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+</p>
+</div>
+
+<p>
+棋盘与贪吃蛇
+</p>
+
+<p>
+我们要创建的是一个窗体应用，整个负责与用户交互的窗体，可以设计一个类来表示：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">SnakeApp</span> {
+
+}
+</pre>
+</div>
+<p>
+这些类内部定义基本还没有，不过没关系，在练习过程中就会慢慢充实起来。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org967b7d5" class="outline-3">
+<h3 id="org967b7d5"><span class="section-number-3">1.3</span> 表达虚拟概念的类</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+刚接触面向对象编程的同学，从现实世界往Java世界做对象映射往往不是什么问题，因为比较直观。比如一个人和一张桌子，对应地设计一个对应的类即可。
+</p>
+
+<p>
+其实一个系统用Java语言来表达的话，往往要设计一些表达虚拟概念的类。将来大家学习到更高级的面向对象设计知识，比如设计模式，就会发现其实这些表达虚拟概念的类才往往是设计一个优秀系统的关键。
+</p>
+
+<p>
+SnakeApp作为一个窗体应用，会接收到用户的输入（比如控制贪吃蛇方向的按键操作），需要展示当前游戏的界面和状态。而Grid则需要随机生成食物，维护着贪吃蛇的状态。那么Grid就要根据SnakeApp中的用户交互来控制游戏状态，因此我们可以设计一个GameController来表示这种控制。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">GameController</span> {
+
+}
+</pre>
+</div>
+
+<p>
+GameController的职责在于接收窗体SnakeApp传递过来的有意义的事件（比如用户改变方向），然后传递给Grid，让Grid即时地更新状态，同时根据最新状态渲染出游戏界面让SnakeApp显示。
+</p>
+
+<p>
+总体的设计图如下：
+</p>
+
+
+<div class="figure">
+<p><img src="./img/overview.png" alt="overview.png" />
+</p>
+</div>
+
+
+<p>
+<b>提高</b>
+</p>
+
+<p>
+上面的设计其实是一个典型的MVC模式，MVC模式（Model-View-Controller）是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）：
+</p>
+
+<ul class="org-ul">
+<li>Controller——负责转发请求，对请求进行处理：对应于GameController</li>
+<li>View——负责界面显示，对应于SnakeApp</li>
+<li>Model——业务功能编写（例如算法实现）、数据库设计以及数据存取操作实现，对应于Grid和Snake</li>
+</ul>
+
+<p>
+最终的类设计并非如此，这只是一个最初的概览，后面我们不仅仅会充实类，而且会增加一些新的类。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70a6e61" class="outline-3">
+<h3 id="org70a6e61"><span class="section-number-3">1.4</span> 总结</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+实现一个应用时，需要梳理构成这个应用的对象都有哪些，以及它们的职责是什么，这样就能形成一个最初的类设计。然后考虑有哪些虚拟的对象，在实现过程中逐渐增加进来。
+</p>
+
+<p>
+涉及的Java基础知识点:
+</p>
+
+<ul class="org-ul">
+<li>定义类</li>
+<li>定义成员变量</li>
+<li>类之间可以通过成员变量相互引用，形成类之间的关联和依赖</li>
+<li>定义构造函数</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org98c36dd" class="outline-3">
+<h3 id="org98c36dd"><span class="section-number-3">1.5</span> 练习</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+参考代码中已经包含了四个类的声明
+</p>
+
+<ul class="org-ul">
+<li>SnakeApp</li>
+<li>GameController</li>
+<li>Grid</li>
+<li>Snake</li>
+</ul>
+
+<p>
+请初步补充Grid的定义：
+</p>
+
+<ul class="org-ul">
+<li>定义一个私有类型为Snake的成员变量，命名为snake（虽然Snake类暂时还是空的，但是不要忘了在Grid类中对snake变量初始化，以后我们会用到它）</li>
+<li>定义Grid逻辑上的长度width和宽度height，类型为int，表示贪吃蛇一个width*height的棋盘上运动</li>
+<li>给Grid定义一个构造函数，传入长度和宽度并进行初始化</li>
+<li>定义访问内部成员变量的方法（Getter方法）：getWidth、getHeight和getSnake</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org63984d0" class="outline-2">
+<h2 id="org63984d0"><span class="section-number-2">2</span> 贪吃蛇的方向</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+这一个练习来考虑贪吃蛇的行进方向问题。贪吃蛇行进的方向可以为上下左右。一种常见的做法是定义一个包含静态常量的类或者接口，比如：
+</p>
+
+<pre class="example">
+class Direction {
+    public static final int UP = 0;
+    public static final int RIGHT = 1;
+    public static final int DOWN = 2;
+    public static final int LEFT = 3;
+}
+</pre>
+
+<p>
+<b>提示</b>
+</p>
+<blockquote>
+<p>
+static请参考静态变量，final请参考常量。
+</p>
+
+<p>
+这是一种典型的取值范围在一个有限的数据集中的场景，这种场景有一种更好的处理方式：枚举（即Enum）。类似的场景还有比如一周包含从星期一到星期日7个取值。
+</p>
+
+<p>
+Enum本质上是一种特殊的类，可以有更多丰富的操作，相比使用静态常量而言功能更加强大，而且具有更好的维护性。
+</p>
+</blockquote>
+</div>
+
+
+<div id="outline-container-orgcc6d20b" class="outline-3">
+<h3 id="orgcc6d20b"><span class="section-number-3">2.1</span> 使用枚举定义Direction</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+通过枚举来定义方向的代码如下：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #8b2252;">/**</span>
+<span style="color: #8b2252;"> * &#36138;&#21507;&#34503;&#21069;&#36827;&#30340;&#26041;&#21521;</span>
+<span style="color: #8b2252;"> */</span>
+<span style="color: #a020f0;">public</span> <span style="color: #a020f0;">enum</span> <span style="color: #228b22;">Direction</span> {
+    <span style="color: #a0522d;">UP</span>,
+    <span style="color: #a0522d;">RIGHT</span>,
+    <span style="color: #a0522d;">DOWN</span>,
+    <span style="color: #a0522d;">LEFT</span>;
+}
+</pre>
+</div>
+
+<p>
+相比前面的代码简洁了许多。
+</p>
+
+<p>
+其实UP、RIGHT等枚举值默认就是public、static和final的。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2b66072" class="outline-3">
+<h3 id="org2b66072"><span class="section-number-3">2.2</span> 枚举的使用</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+枚举最典型的使用场景就是Switch语句，比如根据贪吃蛇移动的方法来变化它的坐标位置：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">switch</span> (direction) {
+    <span style="color: #a020f0;">case</span> UP:
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#21521;&#19978;&#31227;&#21160;</span>
+        <span style="color: #a020f0;">break</span>;
+    <span style="color: #a020f0;">case</span> RIGHT:
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#21521;&#21491;&#31227;&#21160;</span>
+        <span style="color: #a020f0;">break</span>;
+    <span style="color: #a020f0;">case</span> DOWN:
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#21521;&#19979;&#31227;&#21160;</span>
+        <span style="color: #a020f0;">break</span>;
+    <span style="color: #a020f0;">case</span> LEFT:
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#21521;&#24038;&#31227;&#21160;</span>
+        <span style="color: #a020f0;">break</span>;
+}
+</pre>
+</div>
+
+<p>
+我们也可以遍历一个枚举的所有取值，如：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">for</span> (<span style="color: #228b22;">Direction</span> <span style="color: #0000ff;">direction</span>: Direction.values()) {
+    System.out.println(direction);
+}
+</pre>
+</div>
+
+<blockquote>
+<p>
+<b>提示</b>
+</p>
+
+<p>
+如何进行循环遍历参考for循环，Switch的语法参考Switch。
+</p>
+</blockquote>
+
+
+<p>
+<code>Direction.values()</code> 会返回所有的枚举值。 <code>System.out.println(direction)</code> 等价于 <code>System.out.println(direction.toString())</code> 。
+</p>
+
+<p>
+<code>toString()</code> 没有被重载的话，则返回定义时使用的字符串。所以这个遍历会有下面的输出：
+</p>
+
+<pre class="example">
+UP
+RIGHT
+DOWN
+LEFT
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgd397ee8" class="outline-3">
+<h3 id="orgd397ee8"><span class="section-number-3">2.3</span> 给枚举添加成员变量、方法和构造函数</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+方向有时需要进行运算，因此赋予一定的值操作起来会更加方便，比如判断两个方向是否相邻。
+</p>
+
+<p>
+这里我们给Direction中的每一个取值关联一个整数值。这时需要给枚举添加成员变量、方法和构造函数了。我们说过，Enum是一种特殊的Class，所以做这些事情毫无压力。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #8b2252;">/**</span>
+<span style="color: #8b2252;"> * &#36138;&#21507;&#34503;&#21069;&#36827;&#30340;&#26041;&#21521;</span>
+<span style="color: #8b2252;"> */</span>
+<span style="color: #a020f0;">public</span> <span style="color: #a020f0;">enum</span> <span style="color: #228b22;">Direction</span> {
+
+    <span style="color: #0000ff;">UP</span>(0),
+    <span style="color: #0000ff;">RIGHT</span>(1),
+    <span style="color: #0000ff;">DOWN</span>(2),
+    <span style="color: #0000ff;">LEFT</span>(3);
+
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#25104;&#21592;&#21464;&#37327;</span>
+    <span style="color: #a020f0;">private</span> <span style="color: #a020f0;">final</span> <span style="color: #228b22;">int</span> <span style="color: #a0522d;">directionCode</span>;
+
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">&#25104;&#21592;&#26041;&#27861;</span>
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">int</span> <span style="color: #0000ff;">directionCode</span>() {
+        <span style="color: #a020f0;">return</span> directionCode;
+    }
+
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#26500;&#36896;&#20989;&#25968;</span>
+    Direction(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">directionCode</span>) {
+        <span style="color: #a020f0;">this</span>.directionCode = directionCode;
+    }
+}
+</pre>
+</div>
+
+<p>
+上面的代码添加了一个私有的成员directionCode作为方向的整数代码，在后面的练习中你会看到这样的代码对于运算的话会非常方便。
+</p>
+
+<p>
+成员方法directionCode()使得外部可以访问到方向的整数代码，比如：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #228b22;">int</span> <span style="color: #a0522d;">code</span> = <span style="color: #008b8b;">Direction</span>.UP.directionCode();
+</pre>
+</div>
+
+<p>
+增加成员变量后，构造函数就需要传入一个代码参数进行初始化。注意枚举的构造函数不能用Public修饰，否则在外部也能创建新的枚举值不是就会乱套了。
+</p>
+
+<p>
+这时枚举的定义就可以调用新的构造函数了，传入一个整数值来初始化directionCode，比如 <code>UP(0)</code> 就表示向上的方向的整数代码为0。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6dcd502" class="outline-3">
+<h3 id="org6dcd502"><span class="section-number-3">2.4</span> 枚举的其它特性</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>枚举类有一个name()方法，和toString()返回一样的值，所不同的是toString()可以被重载，而name()方法是final的，不能被重载</li>
+
+<li>枚举类还有一个valueOf()方法，这个方法和toString方法是相对应的，调用valueOf("UP")将返回Direction.UP。因此在重写toString()方法时，一般也要相应重写valueOf()方法。</li>
+
+<li>ordinal()：返回枚举值在枚举类种的顺序，这个顺序根据枚举值声明的顺序而定，这里Direction.RIGHT.ordinal()返回1。</li>
+
+<li>枚举可以实现接口，但是不能继承，原因在于任何枚举已经继承自java.lang.Enum，而Java是不支持多继承的。</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0fc9798" class="outline-3">
+<h3 id="org0fc9798"><span class="section-number-3">2.5</span> 练习</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+如果贪吃蛇向左行进时，方向是不可能马上变为向右的，只能向上或者向下。参考代码中已经有了Direction类，请完成Direction中这个方法的实现：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #8b2252;">/**</span>
+<span style="color: #8b2252;"> * &#21028;&#26029;&#26041;&#21521;&#25913;&#21464;&#26159;&#21542;&#26377;&#25928;&#65292;&#20363;&#22914;&#20174;&#21521;&#19978;&#21464;&#20026;&#21521;&#19979;&#20026;&#26080;&#25928;&#65292;&#20174;&#21521;&#19978;&#21464;&#20026;&#21521;&#24038;&#20026;&#26377;&#25928;</span>
+<span style="color: #8b2252;"> * </span><span style="color: #008b8b;">@param</span><span style="color: #8b2252;"> direction</span>
+<span style="color: #8b2252;"> * </span><span style="color: #008b8b;">@return</span>
+<span style="color: #8b2252;"> */</span>
+<span style="color: #a020f0;">public</span> <span style="color: #228b22;">boolean</span> <span style="color: #0000ff;">compatibleWith</span>(<span style="color: #228b22;">Direction</span> <span style="color: #a0522d;">direction</span>) {
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">your code here</span>
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org966430e" class="outline-2">
+<h2 id="org966430e"><span class="section-number-2">3</span> 如何定义一只贪吃蛇？集合类的使用</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org9426348" class="outline-3">
+<h3 id="org9426348"><span class="section-number-3">3.1</span> 如何设计一个类</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+在总体设计中我们给出了几个类，构成了应用的整体概览。具体到每一个类，则需要我们继续去定义其内部结构。
+</p>
+
+<p>
+设计一个类时，往往还要考虑它的接口和继承层次，这里我们暂时无需考虑。 简单地理解，一个类的内部无外乎两部分：
+</p>
+
+<ul class="org-ul">
+<li>成员变量：一个类操作的数据和内容应该被定义为成员变量，这些成员变量共同构成了一个对象的状态。</li>
+<li>成员方法：公有方法就是这个类提供给外部世界的接口，系统中的其他类可以通过公有方法来操作这个类的数据，因此需要考虑这个类的职责和功能，从而确定公有方法。私有方法则一般为公有方法的辅助方法，供内部调用。</li>
+</ul>
+
+<p>
+现在我们来考虑如何编写Snake类。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd51c6a9" class="outline-3">
+<h3 id="orgd51c6a9"><span class="section-number-3">3.2</span> 设计成员变量</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+一条贪吃蛇是由一个一个的节点组成的，在传统的贪吃蛇应用中这个节点通常展示为一个黑色的小方块。所以我们需要选择一种数据结构来表示这些相互连接的节点。不过在这之前，需要先定义出节点这个东西。
+</p>
+
+<p>
+显然，表示节点状态的就是它的X坐标和Y坐标，那么我们通过一个类来定义节点：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">package</span> club.bianyuan.<span style="color: #008b8b;">snake</span>;
+
+<span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">Node</span> {
+
+    <span style="color: #a020f0;">private</span> <span style="color: #a020f0;">final</span> <span style="color: #228b22;">int</span> <span style="color: #a0522d;">x</span>;
+    <span style="color: #a020f0;">private</span> <span style="color: #a020f0;">final</span> <span style="color: #228b22;">int</span> <span style="color: #a0522d;">y</span>;
+
+    <span style="color: #a020f0;">public</span> <span style="color: #0000ff;">Node</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">x</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">y</span>) {
+        <span style="color: #a020f0;">this</span>.x = x;
+        <span style="color: #a020f0;">this</span>.y = y;
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">int</span> <span style="color: #0000ff;">getX</span>() {
+        <span style="color: #a020f0;">return</span> x;
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">int</span> <span style="color: #0000ff;">getY</span>() {
+        <span style="color: #a020f0;">return</span> y;
+    }
+}
+</pre>
+</div>
+
+<blockquote>
+<p>
+<b>提示</b>
+</p>
+
+<p>
+成员变量x和y构成了一个Node的状态。注意这两个成员变量使用final修饰了，表示进行初始赋值之后就不能改变。
+</p>
+</blockquote>
+</div>
+</div>
+
+
+<div id="outline-container-orgb745ff3" class="outline-3">
+<h3 id="orgb745ff3"><span class="section-number-3">3.3</span> 选择数据结构</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+为了表示相互连接在一起的节点，我们可以为Snake定义一个集合类型的成员变量，让集合来保存所有节点。
+</p>
+
+<p>
+你可能会说也可以使用数组来存储一组节点，但是数组的尺寸是固定的，通常情况下程序总是在运行时根据条件来创建对象，我们可能无法预知将要创建对象的个数（贪吃蛇的身体会不断变长），这时Java的集合（Collection）类了（通常也称集合为容器）就是一个很好的选择，因为它们可以帮我们方便地组织和管理一组对象。
+</p>
+
+<blockquote>
+<p>
+<b>提示</b>
+</p>
+
+<p>
+关于集合请参考Java集合。
+</p>
+</blockquote>
+
+<p>
+常用的集合类包括Map、 List和Set，这里显然List是比较适合的，它提供了一系列操作一个元素序列的方法。
+</p>
+
+<p>
+接下来要考虑的问题是选择哪一种List，因为List也有许多种，常见的有ArrayList和LinkedList。这两者的主要不同在于：
+</p>
+
+<ul class="org-ul">
+<li>ArrayList：通过下标随机访问元素快，但是插入、删除元素较慢</li>
+<li>LinkedList：插入、删除和移动元素快，但是通过下标随机访问元素性能较低</li>
+</ul>
+
+<p>
+其实ArrayList是基于数组实现的，而LinkedList是基于链表实现的。这两种数据结构的特点决定了这两个容器的不同之处。
+</p>
+
+<p>
+结合我们自己的应用场景可以发现，贪吃蛇不断变长小经常做插入操作，而且我们不需要随机去访问贪吃蛇中的某一个节点。因此，果断选择LinkedList。
+</p>
+
+<p>
+有了这个思考过程，接下来Snake的成员变量就很清晰了：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">package</span> com.tianmaying.<span style="color: #008b8b;">snake</span>;
+
+<span style="color: #a020f0;">import</span> <span style="color: #008b8b;">java</span>.<span style="color: #008b8b;">util</span>.<span style="color: #228b22;">LinkedList</span>;
+
+<span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">Snake</span> {
+
+    <span style="color: #a020f0;">private</span> <span style="color: #228b22;">LinkedList</span>&lt;<span style="color: #228b22;">Node</span>&gt; <span style="color: #a0522d;">body</span> = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">LinkedList</span>&lt;&gt;();
+
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1681f4e" class="outline-3">
+<h3 id="org1681f4e"><span class="section-number-3">3.4</span> 设计方法</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Snake应该提供什么方法来操作自己的状态呢？贪吃蛇有两种情况下会有状态的变化，一种是吃到食物的时候， 一种就是做了一次移动的时候。
+</p>
+
+<p>
+此外，贪吃蛇也需要定一些查询自己状态和信息的公有方法。比如获取贪吃蛇的头部，获取贪吃蛇的body，对应可以加入这些方法。
+</p>
+
+<p>
+一开始可能定义的方法不够完整，没关系，在编码过程中你会很自然地发现需要Snake提供更多方法来完成特定功能，这个时候你再添加即可。
+</p>
+
+<p>
+把这些方法加入进去之后，Snake的代码看起来就丰富多了：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">package</span> com.tianmaying.<span style="color: #008b8b;">snake</span>;
+
+<span style="color: #a020f0;">import</span> <span style="color: #008b8b;">java</span>.<span style="color: #008b8b;">util</span>.<span style="color: #228b22;">LinkedList</span>;
+
+<span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">Snake</span> {
+
+    <span style="color: #a020f0;">private</span> <span style="color: #228b22;">LinkedList</span>&lt;<span style="color: #228b22;">Node</span>&gt; <span style="color: #a0522d;">body</span> = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">LinkedList</span>&lt;&gt;();
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">Node</span> <span style="color: #0000ff;">eat</span>(<span style="color: #228b22;">Node</span> <span style="color: #a0522d;">food</span>) {
+
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#22914;&#26524;food&#19982;&#22836;&#37096;&#30456;&#37051;&#65292;&#21017;&#23558;food&#36825;&#20010;Node&#21152;&#20837;&#21040;body&#20013;&#65292;&#36820;&#22238;food</span>
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#21542;&#21017;&#19981;&#20570;&#20219;&#20309;&#25805;&#20316;&#65292;&#36820;&#22238;null</span>
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">Node</span> <span style="color: #0000ff;">move</span>(<span style="color: #228b22;">Direction</span> <span style="color: #a0522d;">direction</span>) {
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#26681;&#25454;&#26041;&#21521;&#26356;&#26032;&#36138;&#21507;&#34503;&#30340;body</span>
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#36820;&#22238;&#31227;&#21160;&#20043;&#21069;&#30340;&#23614;&#37096;Node</span>
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">Node</span> <span style="color: #0000ff;">getHead</span>() {
+        <span style="color: #a020f0;">return</span> body.getFirst();
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">Node</span> <span style="color: #0000ff;">addTail</span>(<span style="color: #228b22;">Node</span> <span style="color: #a0522d;">area</span>) {
+        <span style="color: #a020f0;">this</span>.body.addLast(area);
+        <span style="color: #a020f0;">return</span> area;
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">LinkedList</span>&lt;<span style="color: #228b22;">Node</span>&gt; <span style="color: #0000ff;">getBody</span>() {
+        <span style="color: #a020f0;">return</span> body;
+    }
+}
+</pre>
+</div>
+
+<p>
+eat和move方法都给出了详细的处理流程，来动手练习一下吧。
+</p>
+
+<blockquote>
+<p>
+<b>提高</b>
+</p>
+
+<p>
+这里简单解释一下贪吃蛇移动一格的处理。第一感觉是让body中每个Node的坐标都改变一次，这是一个很笨的o(n)的做法，其实只需要在头部增加一个Node，尾部删除一个Node即可。
+</p>
+</blockquote>
+
+
+<div class="figure">
+<p><img src="img/move.png" alt="move.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5ed428a" class="outline-3">
+<h3 id="org5ed428a"><span class="section-number-3">3.5</span> 定义意义明确的私有方法</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+一般情况下类中的每个方法不应该做太多的事情，体现在代码量上就是一个方法不要包含太多的代码。
+</p>
+
+<p>
+一种最简单也是非常有用的方法就是提取出意义明确的私有方法，这样会让代码更加易懂，调试和维护都会更加方便。
+</p>
+
+<p>
+大家可以对比一下下面两种写法：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java">
+<span style="color: #a020f0;">public</span> <span style="color: #228b22;">Node</span> <span style="color: #0000ff;">eat</span>(<span style="color: #228b22;">Node</span> <span style="color: #a0522d;">food</span>) {
+
+    <span style="color: #a020f0;">if</span> (Math.abs(a.getX() - b.getX()) + Math.abs(a.getY() - b.getY()) == 1) {
+            <span style="color: #b22222;">// </span><span style="color: #b22222;">&#30456;&#37051;&#24773;&#20917;&#19979;&#30340;&#22788;&#29702;</span>
+    }
+}
+<span style="color: #a020f0;">public</span> <span style="color: #228b22;">Node</span> <span style="color: #0000ff;">eat</span>(<span style="color: #228b22;">Node</span> <span style="color: #a0522d;">food</span>) {
+
+    <span style="color: #a020f0;">if</span> (isNeighbor(body.getFirst(), food)) {
+            <span style="color: #b22222;">// </span><span style="color: #b22222;">&#30456;&#37051;&#24773;&#20917;&#19979;&#30340;&#22788;&#29702;</span>
+    }
+}
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">private</span> <span style="color: #228b22;">boolean</span> <span style="color: #0000ff;">isNeighbor</span>(<span style="color: #228b22;">Node</span> <span style="color: #a0522d;">a</span>, <span style="color: #228b22;">Node</span> <span style="color: #a0522d;">b</span>) {
+    <span style="color: #a020f0;">return</span> Math.abs(a.getX() - b.getX()) + Math.abs(a.getY() - b.getY()) == 1;
+}
+</pre>
+</div>
+
+<p>
+我们推崇第二种写法，将节点相邻判断的逻辑提取到一个新的方法中，阅读eat()方法的代码时，一眼就知道if语句块要处理的问题。而第一种情况下，时间长了，你可能会一时想不起来这个长长的条件语句用来干嘛的了。
+</p>
+
+<p>
+如果你说可以加注释的话，那么你想想让方法命名本身就成为有意义的“注释”是不是一种更好的方式呢？
+</p>
+</div>
+</div>
+
+<div id="outline-container-org96b5f1d" class="outline-3">
+<h3 id="org96b5f1d"><span class="section-number-3">3.6</span> 练习</h3>
+<div class="outline-text-3" id="text-3-6">
+<blockquote>
+<p>
+<b>提示</b>
+</p>
+
+<p>
+棋盘的左上角坐标的(0, 0)，Y坐标值往下递增，X坐标值往右递增
+</p>
+</blockquote>
+
+<p>
+参考代码中已经给出了Snake的骨架，请按照注释中的要求实现Snake的下面两个方法：
+</p>
+
+<ul class="org-ul">
+<li>eat()</li>
+<li>move()</li>
+</ul>
+
+<blockquote>
+<p>
+<b>提示</b>
+这里你可以假设Snake进行了必要的初始化，body中至少包含一个Node，即Snake处于正常状态，你不需要做这些边界判断。不过这些检查边界条件的工作你也必须做，留在下一个练习当中。一个实际应用最容易出错的地方往往就在边界条件的处理上。
+</p>
+</blockquote>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #228b22;">Node</span> <span style="color: #0000ff;">eat</span>(<span style="color: #228b22;">Node</span> <span style="color: #a0522d;">food</span>) {
+
+     <span style="color: #b22222;">// </span><span style="color: #b22222;">&#22914;&#26524;food&#19982;&#22836;&#37096;&#30456;&#37051;&#65292;&#21017;&#23558;food&#36825;&#20010;Node&#21152;&#20837;&#21040;body&#20013;&#65292;&#36820;&#22238;food</span>
+     <span style="color: #b22222;">// </span><span style="color: #b22222;">&#21542;&#21017;&#19981;&#20570;&#20219;&#20309;&#25805;&#20316;&#65292;&#36820;&#22238;null</span>
+ }
+
+ <span style="color: #8b2252;">/**</span>
+<span style="color: #8b2252;">  * &#24448;&#26576;&#20010;&#26041;&#21521;&#31227;&#21160;&#65292;&#34503;&#30340;&#36523;&#20307;&#21487;&#33021;&#20250;&#37325;&#21472;&#65292;&#37325;&#21472;&#21028;&#26029;&#30001;</span><span style="color: #008b8b;">&lt;code&gt;</span><span style="color: #8b2252;">Grid</span><span style="color: #008b8b;">&lt;/code&gt;</span><span style="color: #8b2252;">&#22788;&#29702;&#12290;</span>
+<span style="color: #8b2252;">  *</span>
+<span style="color: #8b2252;">  * </span><span style="color: #008b8b;">@param</span><span style="color: #8b2252;"> direction</span>
+<span style="color: #8b2252;">  * </span><span style="color: #008b8b;">@return</span><span style="color: #8b2252;"> </span><span style="color: #008b8b;">&lt;code&gt;</span><span style="color: #8b2252;">Snake</span><span style="color: #008b8b;">&lt;/code&gt;</span><span style="color: #8b2252;">&#21407;&#26469;&#30340;&#23614;&#37096;&#65292;&#21363;&#26368;&#21518;&#19968;&#20010;</span><span style="color: #008b8b;">&lt;code&gt;</span><span style="color: #8b2252;">SquareArea</span><span style="color: #008b8b;">&lt;/code&gt;</span>
+<span style="color: #8b2252;">  */</span>
+ <span style="color: #a020f0;">public</span> <span style="color: #228b22;">Node</span> <span style="color: #0000ff;">move</span>(<span style="color: #228b22;">Direction</span> <span style="color: #a0522d;">direction</span>) {
+
+     <span style="color: #a020f0;">switch</span> (direction) {
+         <span style="color: #b22222;">// </span><span style="color: #b22222;">&#26681;&#25454;&#26041;&#21521;&#35745;&#31639;&#22836;&#37096;&#30340;&#26032;&#20301;&#32622;</span>
+     }
+
+     <span style="color: #b22222;">// </span><span style="color: #b22222;">&#23558;&#26032;&#22836;&#37096;&#30340;Node&#22686;&#21152;&#36817;body</span>
+     <span style="color: #b22222;">// </span><span style="color: #b22222;">&#31227;&#38500;&#23614;&#37096;&#30340;Node</span>
+     <span style="color: #b22222;">// </span><span style="color: #b22222;">&#36820;&#22238;&#31227;&#38500;&#30340;Node&#65288;&#23614;&#37096;Node&#65289;</span>
+ }
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2cc4daa" class="outline-2">
+<h2 id="org2cc4daa"><span class="section-number-2">4</span> 贪吃蛇的地盘：用Grid类定义关键算法</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orge877487" class="outline-3">
+<h3 id="orge877487"><span class="section-number-3">4.1</span> Grid的数据成员</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+你现在的Grid代码应该是这个样子：
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">package</span> com.tianmaying.<span style="color: #008b8b;">snake</span>;
+
+<span style="color: #a020f0;">import</span> <span style="color: #008b8b;">java</span>.<span style="color: #008b8b;">util</span>.<span style="color: #228b22;">Arrays</span>;
+
+<span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">Grid</span> {
+
+    <span style="color: #a020f0;">private</span> <span style="color: #a020f0;">final</span> <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>;
+    <span style="color: #a020f0;">private</span> <span style="color: #a020f0;">final</span> <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>;
+
+    <span style="color: #a020f0;">private</span> <span style="color: #228b22;">Snake</span> <span style="color: #a0522d;">snake</span>;
+
+    <span style="color: #a020f0;">public</span> <span style="color: #0000ff;">Grid</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>) {
+
+        <span style="color: #a020f0;">this</span>.width = width;
+        <span style="color: #a020f0;">this</span>.height = height;
+    }
+}
+</pre>
+</div>
+
+<p>
+显然这样成员变量是不足以表达一个棋盘的所有状态的，还需要以下信息：
+</p>
+
+<ul class="org-ul">
+<li>棋盘的方格是否被贪吃蛇覆盖</li>
+<li>食物的位置在哪个方格</li>
+<li>贪吃蛇目前的移动方向</li>
+</ul>
+
+<p>
+一个Grid创建后，它的长宽就是固定不变了，方格的覆盖可以用一个boolean类型的二维数组来表示，如果一个Node被贪吃蛇覆盖，则对应坐标的数组元素为true，否则为false。
+</p>
+
+<p>
+为了表达信息后，Grid需要增加一些成员变量：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">Grid</span> {
+
+    <span style="color: #a020f0;">public</span> <span style="color: #a020f0;">final</span> <span style="color: #228b22;">boolean</span> <span style="color: #a0522d;">status</span>[][];
+    <span style="color: #a020f0;">private</span> <span style="color: #a020f0;">final</span> <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>;
+    <span style="color: #a020f0;">private</span> <span style="color: #a020f0;">final</span> <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>;
+
+    <span style="color: #a020f0;">private</span> <span style="color: #228b22;">Snake</span> <span style="color: #a0522d;">snake</span>;
+    <span style="color: #a020f0;">private</span> <span style="color: #228b22;">Node</span> <span style="color: #a0522d;">food</span>;
+
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">&#21021;&#22987;&#26041;&#21521;&#40664;&#35748;&#35774;&#32622;&#20026;&#21521;&#24038;</span>
+    <span style="color: #a020f0;">private</span> <span style="color: #228b22;">Direction</span> <span style="color: #a0522d;">snakeDirection</span> = <span style="color: #008b8b;">Direction</span>.LEFT;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb95860f" class="outline-3">
+<h3 id="orgb95860f"><span class="section-number-3">4.2</span> Grid的构造函数</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+创建一个棋盘时，需要做一些必要的初始化工作，比如：
+</p>
+
+<ul class="org-ul">
+<li>根据width和height初始化二维数组</li>
+<li>初始化一条贪吃蛇</li>
+<li>初始化食物</li>
+</ul>
+
+<p>
+这些工作都可以在构造函数中完成，构造函数就是用来初始化一个类的地方。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #0000ff;">Grid</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>) {
+
+   <span style="color: #a020f0;">this</span>.width = width;
+   <span style="color: #a020f0;">this</span>.height = height;
+
+   status = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">boolean</span>[width][height];
+   <span style="color: #a020f0;">for</span> (<span style="color: #228b22;">int</span> <span style="color: #a0522d;">i</span> = 0; i &lt; <span style="color: #228b22;">width</span>; ++i) {
+       Arrays.fill(status[i], <span style="color: #008b8b;">false</span>);
+   }
+   initSnake();
+   createFood();
+}
+</pre>
+</div>
+
+
+<p>
+从上面的代码中，可以学习到初始化二维数组的一种方法，一次性分配了整个二维数组的空间：
+</p>
+<div class="org-src-container">
+<pre class="src src-java">status = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">boolean</span>[width][height];
+</pre>
+</div>
+
+<p>
+也可以依次分配每一维的空间，比如这样写也是没有问题：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java">status = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">boolean</span>[width][];
+<span style="color: #a020f0;">for</span> (<span style="color: #228b22;">int</span> <span style="color: #a0522d;">i</span> = 0; i &lt; <span style="color: #228b22;">width</span>; ++i) {
+    status[i] = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">boolean</span>[height];
+    Arrays.fill(status[i], <span style="color: #008b8b;">false</span>);
+}
+</pre>
+</div>
+
+<p>
+当一个二维数组每一维的长度不一样的时候，就需要使用这种方式了。
+</p>
+
+<p>
+统一给数组所有元素赋一个初值，可以使用Arrays.fill()方法。Java中任何变量定义之后如果没有赋初值都会有一个默认值（根据类型一般为null, 0或者false），实际上创建一个boolean类型的二维数组，默认是所有元素都是false的。
+</p>
+
+<p>
+因此最后构造函数可以简化为：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #0000ff;">Grid</span>(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>) {
+
+   <span style="color: #a020f0;">this</span>.width = width;
+   <span style="color: #a020f0;">this</span>.height = height;
+   status = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">boolean</span>[width][height];
+
+   initSnake();
+   createFood();
+}
+</pre>
+</div>
+
+<p>
+接下来看initSnake()和createFood()如何实现。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf9cb4c2" class="outline-3">
+<h3 id="orgf9cb4c2"><span class="section-number-3">4.3</span> 关键方法：初始化贪吃蛇</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+我们可以根据棋盘大小来创建一只大小合适的贪吃蛇，并将其放置在棋盘的某些位置。
+</p>
+
+<p>
+我们设定的规则如下：
+</p>
+
+<ul class="org-ul">
+<li>贪吃蛇的长度为棋盘宽度的三分之一</li>
+<li>贪吃蛇为水平放置，即包含的所有Node的Y坐标相同，Y坐标为棋盘垂直中间位置（即height / 2），最左边的X为棋盘水平中间位置（即width / 2）</li>
+</ul>
+
+<p>
+所有initSnake()的代码逻辑如下：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">private</span> <span style="color: #228b22;">Snake</span> <span style="color: #0000ff;">initSnake</span>() {
+   snake = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">Snake</span>();
+
+   <span style="color: #b22222;">// </span><span style="color: #b22222;">&#35774;&#32622;Snake&#30340;Body</span>
+
+   <span style="color: #b22222;">// </span><span style="color: #b22222;">&#26356;&#26032;&#26827;&#30424;&#35206;&#30422;&#29366;&#24577;</span>
+
+   <span style="color: #a020f0;">return</span> snake;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0ab5f17" class="outline-3">
+<h3 id="org0ab5f17"><span class="section-number-3">4.4</span> 关键方法：随机创建食物</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+随机创建食物，即随机生成食物的X坐标和Y坐标。我们可以使用Java提供的Random类来生成随机数。
+</p>
+
+<p>
+这里需要注意两点：
+</p>
+
+<ul class="org-ul">
+<li>生成的X坐标和Y坐标必须在有效的范围之内，不能超过棋盘大小</li>
+<li>食物的位置不能和贪吃蛇的位置重叠</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #228b22;">Node</span> <span style="color: #0000ff;">createFood</span>() {
+    <span style="color: #228b22;">int</span> <span style="color: #a0522d;">x</span>, <span style="color: #a0522d;">y</span>;
+
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">&#20351;&#29992;Random&#35774;&#32622;x&#21644;y</span>
+
+    food = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">Node</span>(x, y);
+    <span style="color: #a020f0;">return</span> food;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9701c19" class="outline-3">
+<h3 id="org9701c19"><span class="section-number-3">4.5</span> 关键方法：一次移动</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+在Sanke的move方法中，我们只是让贪吃蛇进行移动，移动方向是否有效以及移动后游戏能否继续并没有判断，我们把这些逻辑都放到Grid类的实现中，由Grid类来驱动Snake的move操作，Snake只管执行命令即可。
+</p>
+
+<p>
+每一次移动可以认为是游戏的下一步，因此我们将这个函数定义为nextRound()。
+</p>
+
+<p>
+如何移动后能够继续，返回true，否则返回false。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #228b22;">boolean</span> <span style="color: #0000ff;">nextRound</span>() {
+
+    &#25353;&#24403;&#21069;&#26041;&#21521;&#31227;&#21160;&#36138;&#21507;&#34503;
+
+    <span style="color: #a020f0;">if</span> (&#22836;&#37096;&#30340;&#20301;&#32622;&#26159;&#21542;&#26377;&#25928;) {
+        <span style="color: #a020f0;">if</span> (&#22836;&#37096;&#21407;&#26469;&#26159;&#39135;&#29289;) {
+            <span style="color: #228b22;">&#25226;&#21407;&#26469;move&#25805;&#20316;&#26102;&#21024;&#38500;&#30340;&#23614;&#37096;&#28155;&#21152;&#22238;&#26469;</span>
+            <span style="color: #a0522d;">&#21019;&#24314;&#19968;&#20010;&#26032;&#30340;&#39135;&#29289;</span>
+        } 
+                &#26356;&#26032;&#26827;&#30424;&#29366;&#24577;&#24182;&#36820;&#22238;&#28216;&#25103;&#26159;&#21542;&#32467;&#26463;&#30340;&#26631;&#24535;
+        }       
+}
+</pre>
+</div>
+
+<p>
+头部位置无效有两种情况：
+</p>
+
+<ul class="org-ul">
+<li>碰到边界</li>
+<li>碰到自己</li>
+</ul>
+
+<p>
+吃到食物时，食物添加到原来的头部，贪吃蛇身长+1，所以之前move操作删除的尾部添加回来就是最新的贪吃蛇状态了，而之前的实现中Snake.move()操作已经给我们返回尾部的Node了。
+</p>
+
+<p>
+同时Grid需要提供一个外部修改贪吃蛇行进方向的方法，如下：
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">changeDirection</span>(<span style="color: #228b22;">Direction</span> <span style="color: #a0522d;">newDirection</span>) {
+    <span style="color: #a020f0;">if</span> (snakeDirection.compatibleWith(newDirection)) {
+        snakeDirection = newDirection;
+    }
+}
+</pre>
+</div>
+
+<p>
+这个方法将来在处理用户的键盘输入时需要用到。我们之前实现的 <code>Direction.compatibleWith()</code> 方法在这个时候派上用场了。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org36987bc" class="outline-3">
+<h3 id="org36987bc"><span class="section-number-3">4.6</span> 练习</h3>
+<div class="outline-text-3" id="text-4-6">
+<p>
+参考代码中已经给出Grid类的骨架，请实现Grid中的下面三个方法：
+</p>
+
+<ul class="org-ul">
+<li>initSnake()</li>
+<li>createFood()</li>
+<li>nextRound()</li>
+</ul>
+
+<p>
+在实现中你可以使用参考代码中的一些辅助方法：
+</p>
+
+<pre class="example">
+public boolean validPosition(Node area) {
+    int x = area.getX(), y = area.getY();
+    return x &gt;= 0 &amp;&amp; x &lt; width &amp;&amp; y &gt;= 0 &amp;&amp; y &lt; height &amp;&amp; !status[x][y];
+}
+
+private void dispose(Node node) {
+    status[node.getX()][node.getY()] = false;
+}
+
+private void occupy(Node node) {
+    status[node.getX()][node.getY()] = true;
+}
+
+
+public boolean isFood(Node area) {
+    int x = area.getX(), y = area.getY();
+    return x == food.getX() &amp;&amp; y == food.getY();
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5216a68" class="outline-2">
+<h2 id="org5216a68"><span class="section-number-2">5</span> 编写界面：Swing和Graphics</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org066a6e9" class="outline-3">
+<h3 id="org066a6e9"><span class="section-number-3">5.1</span> 应用界面</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+编写完Grid和Snake之后，我们开始考虑应用的界面展示。棋盘和贪吃蛇要在一个窗口中显示，需要使用Java Swing编程的知识。
+</p>
+
+<p>
+Swing 是一个为Java提供的GUI（Graphics User Interface，图形化界面）编程工具包，是J2SE类库中的一部分，它包含了诸如文本框和按钮等一系列GUI组件。
+</p>
+
+<p>
+Swing编程是一个比较大的主题，这里我们只介绍能够实现贪吃蛇效果的必要知识。此外，Java Swing编程目前来说也不能说是应用非常广泛的技术（比如相比Java Web开发），如果只是练习Java基础，了解一些基本原理和常用组件的用法即可。
+</p>
+
+<p>
+在第一个练习中，我们提到过MVC模式（ <code>Model-View-Controller</code> ）。下面要实现的就是View了。这个练习做完之后，你应该可以看到一条贪吃蛇静静地躺在棋盘上。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ab381b" class="outline-3">
+<h3 id="org0ab381b"><span class="section-number-3">5.2</span> 一个简单的Swing程序</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+SnakeApp是我们希望用来实现界面的类，我们也将其作为整个应用初始化的地方。
+</p>
+
+<p>
+下面是创建一个窗体的典型代码：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #b22222;">// </span><span style="color: #b22222;">&#21019;&#24314;JFrame</span>
+<span style="color: #228b22;">JFrame</span> <span style="color: #a0522d;">window</span> = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">JFrame</span>(<span style="color: #8b2252;">"&#22825;&#30721;&#33829;&#36138;&#21507;&#34503;&#28216;&#25103;"</span>);
+
+<span style="color: #b22222;">// </span><span style="color: #b22222;">&#35774;&#32622;&#31383;&#21475;&#22823;&#23567;</span>
+window.setPreferredSize(<span style="color: #a020f0;">new</span> <span style="color: #228b22;">Dimension</span>(200, 200));
+
+<span style="color: #b22222;">// </span><span style="color: #b22222;">&#24448;&#31383;&#21475;&#20013;&#28155;&#21152;&#32452;&#20214;</span>
+<span style="color: #228b22;">JLabel</span> <span style="color: #a0522d;">label</span> = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">JLabel</span>(<span style="color: #8b2252;">"&#27426;&#36814;&#35775;&#38382;tianmaying.com"</span>);
+window.getContentPane().add(label);
+
+<span style="color: #b22222;">// </span><span style="color: #b22222;">&#35774;&#32622;&#31383;&#21475;&#20026;&#22823;&#23567;&#19981;&#21487;&#21464;&#21270;</span>
+window.setResizable(<span style="color: #008b8b;">false</span>);
+
+<span style="color: #b22222;">// </span><span style="color: #b22222;">&#31383;&#21475;&#20851;&#38381;&#30340;&#34892;&#20026;</span>
+window.setDefaultCloseOperation(<span style="color: #008b8b;">JFrame</span>.EXIT_ON_CLOSE);
+
+<span style="color: #b22222;">// </span><span style="color: #b22222;">&#28210;&#26579;&#21644;&#26174;&#31034;&#31383;&#21475;</span>
+window.pack();
+window.setVisible(<span style="color: #008b8b;">true</span>);
+</pre>
+</div>
+
+<p>
+JFrame： GUI应用的窗口对象，能够最大化、最小化和关闭，它是一个容器，允许添加其他组件，并将它们组织起来呈现给用户。
+</p>
+
+<p>
+默认情况下，关闭窗口，只隐藏界面，不释放占用的内存，window.setDefaultCloseOperation(JFrame.EXIT<sub>ON</sub><sub>CLOSE</sub>);表示关闭窗口时直接关闭应用程序，相当于调用System.exit(0)。
+</p>
+
+<p>
+另外的几个枚举值包括：
+</p>
+
+<p>
+点击窗口右上角关闭，关闭方式如下：
+</p>
+
+<ul class="org-ul">
+<li>DO<sub>NOTHING</sub><sub>ON</sub><sub>CLOSE</sub>：不执行任何操作</li>
+<li>HIDE<sub>ON</sub><sub>CLOSE</sub>：只隐藏界面，相当于调用setVisible(false)</li>
+<li>DISPOSE<sub>ON</sub><sub>CLOSE</sub>：隐藏并释放窗体，相当于调用dispose()，最后一个窗口被释放后程序运行结束</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org44fb2fa" class="outline-3">
+<h3 id="org44fb2fa"><span class="section-number-3">5.3</span> SnakeApp的实现</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+了解了如何创建一个GUI程序之后，我们可以在SnakeApp中实现一个init()函数骨架了：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">package</span> com.tianmaying.<span style="color: #008b8b;">snake</span>;
+
+<span style="color: #a020f0;">import</span> <span style="color: #008b8b;">javax</span>.<span style="color: #008b8b;">swing</span>.*;
+
+<span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">SnakeApp</span> {
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">init</span>() {
+
+        <span style="color: #b22222;">//</span><span style="color: #b22222;">&#21019;&#24314;&#28216;&#25103;&#31383;&#20307;</span>
+        <span style="color: #228b22;">JFrame</span> <span style="color: #a0522d;">window</span> = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">JFrame</span>(<span style="color: #8b2252;">"&#22825;&#30721;&#33829;&#36138;&#21507;&#34503;&#28216;&#25103;"</span>);
+
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#30011;&#20986;&#26827;&#30424;&#21644;&#36138;&#21507;&#34503;</span>
+
+        window.pack();
+        window.setResizable(<span style="color: #008b8b;">false</span>);
+        window.setDefaultCloseOperation(<span style="color: #008b8b;">JFrame</span>.EXIT_ON_CLOSE);
+        window.setVisible(<span style="color: #008b8b;">true</span>);
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #a020f0;">static</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">main</span>(<span style="color: #228b22;">String</span>[] <span style="color: #a0522d;">args</span>) {
+        <span style="color: #228b22;">SnakeApp</span> <span style="color: #a0522d;">snakeApp</span> = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">SnakeApp</span>();
+        snakeApp.init();
+    }
+}
+</pre>
+</div>
+
+<p>
+这样运行出来的窗体是空的，如何画出棋盘和贪吃蛇呢？这需要使用GraphicsAPI了。
+</p>
+
+<p>
+如果你是编程初学者，可以了解一下这三个术语：SDK、API跟Lib，他们分别表示软件开发套件，应用编程接口和库。这三者之间其实有一定的联系，或者是交叉。总体来说，它们都是给开发者提供的一些封装了底层功能的基础设施。了解API可能是成为编程高手花时间最多的一个地方。当然你也不可能把所有API或者SDK种的所有内容完全弄懂。在软件开发中也有二八原则，少数的API能够胜任开发中的大部分场景。所以你只需要掌握关键部分，当在新场景下遇到不能解决的新问题时，再去查看文档。所以帮助文档的阅读也是技术学习的一个关键因素。了解了基础原理之后一般就能上手开发了，帮助文档和API文档可以在你在实践中时参考。比如Graphics API和它的中文版本。
+</p>
+
+<p>
+你现在不需要细读这些文档，先来了解基本原理和关键知识。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org573fd38" class="outline-3">
+<h3 id="org573fd38"><span class="section-number-3">5.4</span> Graphics API</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+这里有一个官方的Graphics API<a href="https://docs.oracle.com/javase/tutorial/2d/basic2d/">基础教程</a>。
+</p>
+
+<p>
+从这个教程中，你可以知道Graphics可以帮助我们画出各种图形和图像。
+</p>
+
+<p>
+分析第一节中展示的界面，其实只包含了两种元素：圆形和矩形。食物是一个圆形，棋盘的背景是一个大矩形，蛇是由多个小矩形组成的。
+</p>
+
+<p>
+那让我们了解一下如何画矩形和圆形吧。
+</p>
+
+<ul class="org-ul">
+<li>画一个实体的圆形，可以使用fillOval(int x,int y,int width,int height)方法，它用预定的颜色填充的椭圆形，当横轴和纵轴相等时，所画的椭圆形即为圆形。</li>
+
+<li>画一个实体的矩形，可以使用fillRect(int x,int y,int width,int height)方法，它用预定的颜色填充一个矩形。</li>
+</ul>
+
+<p>
+为了使用Graphics API画图，我们创建一个新类GameView来做这件事情：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">package</span> com.tianmaying.<span style="color: #008b8b;">snake</span>;
+
+<span style="color: #a020f0;">import</span> <span style="color: #008b8b;">javax</span>.<span style="color: #008b8b;">swing</span>.*;
+<span style="color: #a020f0;">import</span> <span style="color: #008b8b;">java</span>.<span style="color: #008b8b;">awt</span>.*;
+
+<span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">GameView</span> {
+
+    <span style="color: #a020f0;">private</span> <span style="color: #a020f0;">final</span> <span style="color: #228b22;">Grid</span> <span style="color: #a0522d;">grid</span>;
+
+    <span style="color: #a020f0;">public</span> <span style="color: #0000ff;">GameView</span>(<span style="color: #228b22;">Grid</span> <span style="color: #a0522d;">grid</span>) {
+        <span style="color: #a020f0;">this</span>.grid = grid;
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">draw</span>(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>) {
+        drawGridBackground(graphics);
+        drawSnake(graphics, grid.getSnake());
+        drawFood(graphics, grid.getFood());
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">drawSnake</span>(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>, <span style="color: #228b22;">Snake</span> <span style="color: #a0522d;">snake</span>) {
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">drawFood</span>(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>, <span style="color: #228b22;">Node</span> <span style="color: #a0522d;">squareArea</span>) {
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">drawGridBackground</span>(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>) {
+    }
+
+}
+</pre>
+</div>
+
+<p>
+可以看到在GameView的draw()方法中，分别去画背景、贪吃蛇和食物即可，画这些东西的时候，就需要使用fillOval和fillRect方法了。这里可以实现两个私有的辅助类：
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">private</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">drawSquare</span>(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>, <span style="color: #228b22;">Node</span> <span style="color: #a0522d;">squareArea</span>, <span style="color: #228b22;">Color</span> <span style="color: #a0522d;">color</span>) {
+    graphics.setColor(color);
+    <span style="color: #228b22;">int</span> <span style="color: #a0522d;">size</span> = <span style="color: #008b8b;">Settings</span>.DEFAULT_NODE_SIZE;
+    graphics.fillRect(squareArea.getX() * size, squareArea.getY() * size, size - 1, size - 1);
+}
+
+
+<span style="color: #a020f0;">private</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">drawCircle</span>(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>, <span style="color: #228b22;">Node</span> <span style="color: #a0522d;">squareArea</span>, <span style="color: #228b22;">Color</span> <span style="color: #a0522d;">color</span>) {
+    graphics.setColor(color);
+    <span style="color: #228b22;">int</span> <span style="color: #a0522d;">size</span> = <span style="color: #008b8b;">Settings</span>.DEFAULT_NODE_SIZE;
+    graphics.fillOval(squareArea.getX() * size, squareArea.getY() * size, size, size);
+}
+</pre>
+</div>
+
+<p>
+基于drawSquare()和drawCircle()就能很容易地画出界面了。
+</p>
+
+<blockquote>
+<p>
+<b>提高</b>
+</p>
+
+<p>
+完整的GraphicsAPI如下，还有一张形象的解释图。
+<img src="./img/graph.png" alt="graph.png" />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #b22222;">// </span><span style="color: #b22222;">Drawing (or printing) texts on the graphics screen:</span>
+drawString(<span style="color: #228b22;">String</span> <span style="color: #a0522d;">str</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">xBaselineLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">yBaselineLeft</span>);
+
+<span style="color: #b22222;">// </span><span style="color: #b22222;">Drawing lines:</span>
+drawLine(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">x1</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">y1</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">x2</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">y2</span>);
+drawPolyline(<span style="color: #228b22;">int</span>[] <span style="color: #a0522d;">xPoints</span>, <span style="color: #228b22;">int</span>[] <span style="color: #a0522d;">yPoints</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">numPoint</span>);
+
+<span style="color: #b22222;">// </span><span style="color: #b22222;">Drawing primitive shapes:</span>
+drawRect(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">xTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">yTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>);
+drawOval(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">xTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">yTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>);
+drawArc(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">xTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">yTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">startAngle</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">arcAngle</span>);
+draw3DRect(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">xTopLeft</span>, <span style="color: #228b22;">int</span>, yTopLeft, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>, <span style="color: #228b22;">boolean</span> <span style="color: #a0522d;">raised</span>);
+drawRoundRect(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">xTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">yTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">arcWidth</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">arcHeight</span>)
+drawPolygon(<span style="color: #228b22;">int</span>[] <span style="color: #a0522d;">xPoints</span>, <span style="color: #228b22;">int</span>[] <span style="color: #a0522d;">yPoints</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">numPoint</span>);
+
+<span style="color: #b22222;">// </span><span style="color: #b22222;">Filling primitive shapes:</span>
+fillRect(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">xTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">yTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>);
+fillOval(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">xTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">yTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>);
+fillArc(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">xTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">yTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">startAngle</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">arcAngle</span>);
+fill3DRect(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">xTopLeft</span>, <span style="color: #228b22;">int</span>, yTopLeft, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>, <span style="color: #228b22;">boolean</span> <span style="color: #a0522d;">raised</span>);
+fillRoundRect(<span style="color: #228b22;">int</span> <span style="color: #a0522d;">xTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">yTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">arcWidth</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">arcHeight</span>)
+fillPolygon(<span style="color: #228b22;">int</span>[] <span style="color: #a0522d;">xPoints</span>, <span style="color: #228b22;">int</span>[] <span style="color: #a0522d;">yPoints</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">numPoint</span>);
+
+<span style="color: #b22222;">// </span><span style="color: #b22222;">Drawing (or Displaying) images:</span>
+drawImage(<span style="color: #228b22;">Image</span> <span style="color: #a0522d;">img</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">xTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">yTopLeft</span>, <span style="color: #228b22;">ImageObserver</span> <span style="color: #a0522d;">obs</span>);  <span style="color: #b22222;">// </span><span style="color: #b22222;">draw image with its size</span>
+drawImage(<span style="color: #228b22;">Image</span> <span style="color: #a0522d;">img</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">xTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">yTopLeft</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">width</span>, <span style="color: #228b22;">int</span> <span style="color: #a0522d;">height</span>, <span style="color: #228b22;">ImageObserver</span> <span style="color: #a0522d;">o</span>);  <span style="color: #b22222;">// </span><span style="color: #b22222;">resize image on screen</span>
+</pre>
+</div>
+</blockquote>
+</div>
+</div>
+
+
+<div id="outline-container-org56731c4" class="outline-3">
+<h3 id="org56731c4"><span class="section-number-3">5.5</span> 在窗口中显示界面</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+知道了如何通过Graphics画界面之后，我们还面临一个问题，如何显示在JFrame中。
+</p>
+
+<p>
+这就是使用JPanel了，它也是一种容器类，可以加入到JFrame窗体中，而且它具有一个接口：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">paintComponent</span>(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>);
+</pre>
+</div>
+
+<p>
+在这个接口中可以拿到当前面板的Graphics实例，基于之前介绍的API就能画图了，我们按照如下方式修改GameView的代码：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">package</span> com.tianmaying.<span style="color: #008b8b;">snake</span>;
+
+<span style="color: #a020f0;">import</span> <span style="color: #008b8b;">javax</span>.<span style="color: #008b8b;">swing</span>.*;
+<span style="color: #a020f0;">import</span> <span style="color: #008b8b;">java</span>.<span style="color: #008b8b;">awt</span>.*;
+
+<span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">GameView</span> {
+
+    <span style="color: #a020f0;">private</span> <span style="color: #228b22;">JPanel</span> <span style="color: #a0522d;">canvas</span>;
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">init</span>() {
+        canvas = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">JPanel</span>() {
+            <span style="color: #008b8b;">@Override</span>
+            <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> paintComponent(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>) {
+                drawGridBackground(graphics);
+                drawSnake(graphics, grid.getSnake());
+                drawFood(graphics, grid.getFood());
+            }
+        };
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">draw</span>() {
+        canvas.repaint();
+    }
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">JPanel</span> <span style="color: #0000ff;">getCanvas</span>() {
+        <span style="color: #a020f0;">return</span> canvas;
+    }
+
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">...</span>
+}
+</pre>
+</div>
+<p>
+这部分代码需要着重解释一下，因为涉及到一种回调和匿名类几个概念。
+</p>
+
+<p>
+GameView新增了一个JPanel类型的成员变量canvas
+新增了一个init()方法用以初始化canvas
+原来的draw(Graphics graphics)方法改为了draw()，此时不需要传入参数，只需调用canvas的repaint()方法即可。因为JPanel的repaint()方法可以自动刷新界面
+原来的draw(Graphics graphics)实现代码移到public void paintComponent(Graphics graphics)方法的内部了，只要放进去即可，Swing会在合适的时机去调用这个方法，展示出合适的界面，这就是典型的回调（callback）的概念。
+再来分析一下下面这个代码：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java">canvas = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">JPanel</span>() {
+   <span style="color: #008b8b;">@Override</span>
+   <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> paintComponent(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>) {
+       drawGridBackground(graphics);
+       drawSnake(graphics, grid.getSnake());
+       drawFood(graphics, grid.getFood());
+   }
+};
+</pre>
+</div>
+
+
+
+<p>
+这段代码其实等价于创建一个CanvasPanel（任何合法的命名都可以）
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java">CanvasPanel.<span style="color: #228b22;">java</span>
+
+<span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> CanvasPanel <span style="color: #a020f0;">extends</span> <span style="color: #228b22;">JPanel</span> {
+   <span style="color: #008b8b;">@Override</span>
+   <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">paintComponent</span>(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>) {
+       drawGridBackground(graphics);
+       drawSnake(graphics, grid.getSnake());
+       drawFood(graphics, grid.getFood());
+   }
+}
+</pre>
+</div>
+
+<p>
+然后在init()方法中使用：
+</p>
+
+<p>
+<code>GameView.java</code>
+</p>
+<div class="org-src-container">
+<pre class="src src-java">canvas = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">CanvasPanel</span>();
+</pre>
+</div>
+
+<p>
+因为这个CanvasPanel仅仅在这里使用一次，我们就可以使用匿名类的方式，现场定义现场使用用完即走，就有了这种写法。对这样的代码了然于心的时候，说明你已经有不错的Java编程经验啦。
+</p>
+
+<p>
+最后，在SankeApp中，只需要将这个JPanel添加到JFrame中就行了。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">init</span>() {
+
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">&#21021;&#22987;&#21270;grid</span>
+            ...
+
+    JFrame window = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">JFrame</span>(<span style="color: #8b2252;">"&#22825;&#30721;&#33829;&#36138;&#21507;&#34503;&#28216;&#25103;"</span>);
+
+    <span style="color: #228b22;">Container</span> <span style="color: #a0522d;">contentPane</span> = window.getContentPane();
+
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">&#22522;&#20110;Grid&#21021;&#22987;&#21270;gamaView</span>
+    gameView = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">GameView</span>(grid);
+    gameView.init();
+
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">&#35774;&#32622;gameView&#20013;JPanel&#30340;&#22823;&#23567;</span>
+    gameView.getCanvas().setPreferredSize(<span style="color: #a020f0;">new</span> <span style="color: #228b22;">Dimension</span>(<span style="color: #008b8b;">Settings</span>.DEFAULT_GRID_WIDTH, <span style="color: #008b8b;">Settings</span>.DEFAULT_GRID_HEIGHT));
+
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">&#23558;gameView&#20013;JPanel&#21152;&#20837;&#21040;&#31383;&#21475;&#20013;</span>
+    contentPane.add(gameView.getCanvas(), <span style="color: #008b8b;">BorderLayout</span>.CENTER);
+
+    window.pack();
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">...</span>
+}
+</pre>
+</div>
+
+<p>
+好了，一条呆萌的贪吃蛇已经静静躺在漆黑一片的棋盘中了。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2bfec25" class="outline-3">
+<h3 id="org2bfec25"><span class="section-number-3">5.6</span> 练习</h3>
+<div class="outline-text-3" id="text-5-6">
+<blockquote>
+<p>
+<b>注意</b>
+</p>
+
+<p>
+作业实现中，涉及到颜色和长宽，请使用参考代码中Settings类中定义的默认值。
+</p>
+</blockquote>
+
+<p>
+给出GameView类下面三个成员方法的实现：
+</p>
+<ul class="org-ul">
+<li>drawSnake 贪吃蛇用正方形画出</li>
+<li>drawFood 食物用圆形画出</li>
+<li>drawGridBackground</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #8b2252;">/**</span>
+<span style="color: #8b2252;"> * &#28210;&#26579;&#36138;&#21507;&#34503;</span>
+<span style="color: #8b2252;"> * </span><span style="color: #008b8b;">@param</span><span style="color: #8b2252;"> graphics</span>
+<span style="color: #8b2252;"> * </span><span style="color: #008b8b;">@param</span><span style="color: #8b2252;"> snake</span>
+<span style="color: #8b2252;"> */</span>
+<span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">drawSnake</span>(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>, <span style="color: #228b22;">Snake</span> <span style="color: #a0522d;">snake</span>) {
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">your code here</span>
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">&#36138;&#21507;&#34503;&#29992;&#27491;&#26041;&#24418;&#30011;&#20986;</span>
+}
+
+<span style="color: #8b2252;">/**</span>
+<span style="color: #8b2252;"> * &#28210;&#26579;&#39135;&#29289;</span>
+<span style="color: #8b2252;"> * </span><span style="color: #008b8b;">@param</span><span style="color: #8b2252;"> graphics</span>
+<span style="color: #8b2252;"> * </span><span style="color: #008b8b;">@param</span><span style="color: #8b2252;"> squareArea</span>
+<span style="color: #8b2252;"> */</span>
+<span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">drawFood</span>(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>, <span style="color: #228b22;">Node</span> <span style="color: #a0522d;">squareArea</span>) {
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">your code here</span>
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">&#39135;&#29289;&#29992;&#22278;&#24418;&#30011;&#20986;</span>
+}
+
+<span style="color: #8b2252;">/**</span>
+<span style="color: #8b2252;"> * &#28210;&#26579;&#26827;&#30424;&#32972;&#26223;</span>
+<span style="color: #8b2252;"> *</span>
+<span style="color: #8b2252;"> * </span><span style="color: #008b8b;">@param</span><span style="color: #8b2252;"> graphics</span>
+<span style="color: #8b2252;"> */</span>
+<span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">drawGridBackground</span>(<span style="color: #228b22;">Graphics</span> <span style="color: #a0522d;">graphics</span>) {
+    graphics.setColor(<span style="color: #008b8b;">Settings</span>.DEFAULT_BACKGROUND_COLOR);
+
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">your code here</span>
+}
+</pre>
+</div>
+
+<p>
+给出SnakeApp的init()方法的完整实现。
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">init</span>() {
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">your code here: &#21021;&#22987;&#21270;Grid</span>
+
+    <span style="color: #b22222;">//</span><span style="color: #b22222;">&#21019;&#24314;&#28216;&#25103;&#31383;&#20307;</span>
+    <span style="color: #228b22;">JFrame</span> <span style="color: #a0522d;">window</span> = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">JFrame</span>(<span style="color: #8b2252;">"&#22825;&#30721;&#33829;&#36138;&#21507;&#34503;&#28216;&#25103;"</span>);
+
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">your code here: &#21021;&#22987;&#21270;GameView&#65292;&#24182;&#25918;&#21040;window&#20013;</span>
+
+    window.pack();
+    window.setResizable(<span style="color: #008b8b;">false</span>);
+    window.setDefaultCloseOperation(<span style="color: #008b8b;">JFrame</span>.EXIT_ON_CLOSE);
+    window.setVisible(<span style="color: #008b8b;">true</span>);
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5279cfc" class="outline-2">
+<h2 id="org5279cfc"><span class="section-number-2">6</span> 交互的处理：用GameController协调界面与模型</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org9ad098c" class="outline-3">
+<h3 id="org9ad098c"><span class="section-number-3">6.1</span> GameController的作用</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+你已经可以根据一个Grid画出来游戏界面了，接下来就要开始处理用户的按键输入了。
+</p>
+
+<p>
+还记得第一个练习中的总体设计概览图吗？ 我们已经实现了大部分的类，也增加了一些新的类，现在应该是这个样子了：
+</p>
+
+
+<div class="figure">
+<p><img src="./img/flow.png" alt="flow.png" />
+</p>
+</div>
+
+
+<p>
+系统可以分为三个部分，模型（Model）、视图（View）和控制器（Controller）：
+</p>
+
+<ul class="org-ul">
+<li>Model：业务功能、核心数据结构与算法，对应蓝色部分</li>
+<li>View：负责界面显示，对应黄色部分</li>
+<li>Controller：负责转发用户操作事件，对事件进行处理，对应红色部分</li>
+</ul>
+
+<p>
+模型和视图已经基本完成了，我们在界面中画出了贪吃蛇以及它的食物，现在，让我们学习如何通过键盘操作让贪吃蛇动起来。这就需要GameController粉墨登场了。
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org67fee02" class="outline-3">
+<h3 id="org67fee02"><span class="section-number-3">6.2</span> 接收键盘事件</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+首先我们需要一个按键监听器，当玩家敲击键盘的时候，就可以通过按键监听器知道玩家敲击了什么按键。
+</p>
+
+<p>
+Java已经为我们提供好了键盘监听的接口，其接口定义如下：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #a020f0;">interface</span> <span style="color: #228b22;">KeyListener</span> <span style="color: #a020f0;">extends</span> <span style="color: #228b22;">EventListener</span> {
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">keyPressed</span>(<span style="color: #228b22;">KeyEvent</span> <span style="color: #a0522d;">e</span>);
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">keyReleased</span>(<span style="color: #228b22;">KeyEvent</span> <span style="color: #a0522d;">e</span>);
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">keyTyped</span>(<span style="color: #228b22;">KeyEvent</span> <span style="color: #a0522d;">e</span>);
+}
+</pre>
+</div>
+
+<p>
+Java将键盘输入分成了三个步骤，按下(press)，释放(release)，键入(type)，对应了KeyListener的三个方法：
+</p>
+
+<ul class="org-ul">
+<li>keyPressed： 按下某个键时会调用该方法</li>
+<li>keyReleased： 释放某个键时会调用该方法</li>
+<li>keyTyped： 键入某个键时会调用该方法</li>
+</ul>
+
+<p>
+我们只需要让GameController实现该接口，即可完成一个按键监听器的实现：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">GameController</span> <span style="color: #a020f0;">implements</span> <span style="color: #228b22;">KeyListener</span> {
+    <span style="color: #008b8b;">@Override</span>
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">keyPressed</span>(<span style="color: #228b22;">KeyEvent</span> <span style="color: #a0522d;">e</span>) {
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#36825;&#37324;&#22788;&#29702;&#25353;&#38190;</span>
+    }
+
+    <span style="color: #008b8b;">@Override</span>
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">keyReleased</span>(<span style="color: #228b22;">KeyEvent</span> <span style="color: #a0522d;">e</span>) {
+
+    }
+
+    <span style="color: #008b8b;">@Override</span>
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">keyTyped</span>(<span style="color: #228b22;">KeyEvent</span> <span style="color: #a0522d;">e</span>) {
+
+    }
+}
+</pre>
+</div>
+
+<p>
+keyReleased()和keyTyped()方法不需要用到，我们只需要在keyPressed()方法中进行事件处理。
+</p>
+
+<p>
+这样GameController就可以我们的游戏控制中心，我们可以通过它监听键盘并实现对界面的控制，
+</p>
+
+<p>
+当然，我们需要通过下列语句在SnakeApp进行init()初始化时将GameController注册进window中：
+</p>
+
+<p>
+<code>SnakeApp.java</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java">window.addKeyListener(<span style="color: #228b22;">gameController</span>);
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgd373264" class="outline-3">
+<h3 id="orgd373264"><span class="section-number-3">6.3</span> 处理键盘事件</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+现在贪吃蛇还不能自动动起来，因此我们先让贪吃蛇接收到一个方向键时，就进行移动。所以keyPressed()方法的核心逻辑是：
+</p>
+
+<ul class="org-ul">
+<li>收到按键事件</li>
+<li>根据按键情况，做一次移动</li>
+<li>移动后重现显示界面</li>
+</ul>
+
+<p>
+比如处理向上移动的代码逻辑如下：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">GameController</span> <span style="color: #a020f0;">implements</span> <span style="color: #228b22;">KeyListener</span> {
+
+    <span style="color: #008b8b;">@Override</span>
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">keyPressed</span>(<span style="color: #228b22;">KeyEvent</span> <span style="color: #a0522d;">e</span>) {
+        <span style="color: #228b22;">int</span> <span style="color: #a0522d;">keyCode</span> = e.getKeyCode();
+
+        <span style="color: #a020f0;">if</span> (keyCode == <span style="color: #008b8b;">KeyEvent</span>.VK_UP) {
+            grid.changeDirection(<span style="color: #008b8b;">Direction</span>.UP);
+        }
+
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">repaint the canvas</span>
+    }
+}
+</pre>
+</div>
+
+<p>
+处理好所有影响游戏状态的事件，你已经拥有了一只跟着你按键移动的贪吃蛇，不过你不按键它是静止不动的，你离完成一个完整的贪吃蛇游戏只差最后一步了。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org031f0f9" class="outline-3">
+<h3 id="org031f0f9"><span class="section-number-3">6.4</span> 练习</h3>
+<div class="outline-text-3" id="text-6-4">
+<ol class="org-ol">
+<li><p>
+实现GameController的keyPressed方法。
+</p>
+<ul class="org-ul">
+<li>如果按键对应的方向有效，则按新方向移动一步</li>
+<li>如果按键对应的方向无效（比如上一个方向是向左，按下→），则按原来方向移动一步</li>
+<li>这里你不需要考虑贪吃蛇碰到边界和自己的情况</li>
+<li>如果按键不是方向键，则不做任何操作，贪吃蛇原地不动</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #008b8b;">@Override</span>
+<span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">keyPressed</span>(<span style="color: #228b22;">KeyEvent</span> <span style="color: #a0522d;">e</span>) {
+    <span style="color: #b22222;">// </span><span style="color: #b22222;">your code here</span>
+}
+</pre>
+</div>
+<blockquote>
+<p>
+<b>提示</b>
+</p>
+
+<p>
+你可以通过e.getKeyCode()获取输入按键的代码，上下左右键的键值分别为KeyEvent.VK<sub>UP</sub>、KeyEvent.VK<sub>DOWN</sub>、KeyEvent.VK<sub>LEFT和KeyEvent.VK</sub><sub>RIGHT</sub>，根据键值改变方向和进行移动即可。
+</p>
+</blockquote></li>
+
+<li><p>
+在SnakeApp的init()方法中，添加初始化GameController的代码：
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">SnakeApp</span> {
+
+    <span style="color: #228b22;">Grid</span> <span style="color: #a0522d;">grid</span>;
+    <span style="color: #228b22;">GameView</span> <span style="color: #a0522d;">gameView</span>;
+    <span style="color: #228b22;">GameController</span> <span style="color: #a0522d;">gameController</span>;
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">init</span>() {
+
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">...</span>
+
+        window.pack();
+        window.setResizable(<span style="color: #008b8b;">false</span>);
+        window.setDefaultCloseOperation(<span style="color: #008b8b;">JFrame</span>.EXIT_ON_CLOSE);
+        window.setVisible(<span style="color: #008b8b;">true</span>);
+
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">your code here&#65306; &#21021;&#22987;&#21270;gameController&#65292;&#24182;&#20026;window&#35774;&#32622;&#30417;&#21548;&#22120;</span>
+    }
+}
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeb865db" class="outline-2">
+<h2 id="orgeb865db"><span class="section-number-2">7</span> 让贪吃蛇自己动起来：Thread的使用</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orge881fea" class="outline-3">
+<h3 id="orge881fea"><span class="section-number-3">7.1</span> 如何让贪吃蛇移动起来</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+让贪吃蛇不断地移动，一个直观的处理方式是，在一个while循环中不断调用Grid.nextRound()方法：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">while</span> (running) {
+    grid.nextRound();
+}
+</pre>
+</div>
+
+<p>
+不过每次调用nextRound()之间需要有一个时间间隔，需要给游戏玩家反应时间来在下一次移动之前进行操作，比如改变方向。
+</p>
+
+<p>
+这时就可以使用Thread.sleep()方法来让当前的执行暂时停止：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">while</span> (running) {
+        <span style="color: #a020f0;">try</span> {
+            Thread.sleep(<span style="color: #008b8b;">Settings</span>.DEFAULT_MOVE_INTERVAL);
+        } <span style="color: #a020f0;">catch</span> (<span style="color: #228b22;">InterruptedException</span> <span style="color: #a0522d;">e</span>) {
+            <span style="color: #a020f0;">break</span>;
+        }
+    grid.nextRound();
+}
+</pre>
+</div>
+
+
+<p>
+Settings.DEFAULT<sub>MOVE</sub><sub>INTERVAL的值为200</sub>，这样玩家每一次移动有0.2秒的时间来进行操作。
+</p>
+
+<p>
+上面这段代码显然需要在一个新的线程中跑，否则其他线程就可能被影响，比如在接收用户输入的线程中跑这段代码的话，就无法接收用户输入了，因为都在那Sleep了。
+</p>
+
+<p>
+所以接下来你需要了解一点多线程编程的知识了。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde3cf6c" class="outline-3">
+<h3 id="orgde3cf6c"><span class="section-number-3">7.2</span> 多线程的基础知识</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+如果对线程的概念还不太熟悉，请大家自行复习。简单的理解，多线程是实现多任务的一种方式，多个线程共享一个进程的内存，他们轮换着执行，虽然看起来像是在“同时”执行。
+</p>
+
+<p>
+创建线程与创建普通的类的对象是类似的。Java提供了Thread类来支持多线程程序，一个线程就是Thread类或其子类的实例对象，即每个Thread对象对应于一个单独的线程。
+</p>
+
+<p>
+有两种方式来创建线程：
+</p>
+
+<ul class="org-ul">
+<li><p>
+从Thread类派生一个新的线程类，重载其run()方法
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">class</span> <span style="color: #228b22;">MyThread</span> <span style="color: #a020f0;">extends</span> <span style="color: #228b22;">Thread</span> {
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">run</span>() {
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#32447;&#31243;&#25191;&#34892;&#30340;&#20195;&#30721;</span>
+    }
+    <span style="color: #a020f0;">public</span> <span style="color: #a020f0;">static</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">main</span>(<span style="color: #228b22;">String</span>[] <span style="color: #a0522d;">args</span>) {
+        <span style="color: #228b22;">MyThread</span> <span style="color: #a0522d;">thread</span> = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">MyThread</span>();
+        thread.start();
+    }
+}
+</pre>
+</div></li>
+
+<li><p>
+实现Runnalbe接口，重载接口中的run()方法
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">class</span> MyThread <span style="color: #228b22;">implments</span> <span style="color: #228b22;">Runnable</span> {
+
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">run</span>() {
+        <span style="color: #b22222;">// </span><span style="color: #b22222;">&#32447;&#31243;&#25191;&#34892;&#30340;&#20195;&#30721;</span>
+    }
+    <span style="color: #a020f0;">public</span> <span style="color: #a020f0;">static</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">main</span>(<span style="color: #228b22;">String</span>[] <span style="color: #a0522d;">args</span>) {
+        <span style="color: #228b22;">MyThread</span> <span style="color: #a0522d;">thread</span> = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">MyThread</span>();
+        <span style="color: #a020f0;">new</span> <span style="color: #228b22;">Thread</span>(thread).start();
+    }
+}
+</pre>
+</div></li>
+</ul>
+
+
+<p>
+两种方式在启动线程时有所区别，通过实现Runnable接口实现的线程类，启动时也是通过调用Thread的构造函数Thread(Runnable runnable)来创建一个线程并启动的。
+</p>
+
+<p>
+注意启动线程调用的方法是start()，而不是run()，这是一个初学者常见的错误。
+</p>
+
+<blockquote>
+<p>
+<b>提示</b>
+</p>
+
+<p>
+选择哪一种方法来创建线程呢？Java只支持单继承，即定义一个新类时，只能extends一个外部类。如果创建自定义线程类的时候是通过继承Thread类的来实现，那么这个自定义类就不能再去继承其他类了。因此，如果自定义类必须继承其他的类，那么就可以使用实现Runnable接口的方法，这样就可以避免Java单继承所带来的局限性。
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+<b>提高</b>
+</p>
+
+<p>
+注意还有其它更高级的方式来创建线程，比如ExecutorSevice，有兴趣的同学可以进一步深入。
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-orgea86f74" class="outline-3">
+<h3 id="orgea86f74"><span class="section-number-3">7.3</span> 实现游戏线程</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+要实现游戏线程，其实就是把第一节中的while循环代码放入到一个线程类的run()方法中。
+</p>
+
+<p>
+那么哪个类适合作为线程类呢？这个线程里不断调用Grid.nextRun()方法，并且还要即时地更新界面，显然这也是术语GameController的职责，所以让GameController实现Runnable接口，让它成为一个线程类。
+</p>
+
+<p>
+同时为了控制一次游戏是否结束，增加一个boolean类型的标志running。
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #a020f0;">class</span> <span style="color: #228b22;">GameController</span> <span style="color: #a020f0;">implements</span> <span style="color: #228b22;">Runnable</span>, <span style="color: #228b22;">KeyListener</span> {
+    <span style="color: #a020f0;">private</span> <span style="color: #a020f0;">final</span> <span style="color: #228b22;">Grid</span> <span style="color: #a0522d;">grid</span>;
+    <span style="color: #a020f0;">private</span> <span style="color: #a020f0;">final</span> <span style="color: #228b22;">GameView</span> <span style="color: #a0522d;">gameView</span>;
+
+    <span style="color: #a020f0;">private</span> <span style="color: #228b22;">boolean</span> <span style="color: #a0522d;">running</span>;
+
+    <span style="color: #a020f0;">public</span> <span style="color: #0000ff;">GameController</span>(<span style="color: #228b22;">Grid</span> <span style="color: #a0522d;">grid</span>, <span style="color: #228b22;">GameView</span> <span style="color: #a0522d;">gameView</span>) {
+        <span style="color: #a020f0;">this</span>.grid = grid;
+        <span style="color: #a020f0;">this</span>.gameView = gameView;
+        <span style="color: #a020f0;">this</span>.running = <span style="color: #008b8b;">true</span>;
+    }
+
+    <span style="color: #008b8b;">@Override</span>
+    <span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">run</span>() {
+        <span style="color: #a020f0;">while</span> (running) {
+            <span style="color: #a020f0;">try</span> {
+                Thread.sleep(<span style="color: #008b8b;">Settings</span>.DEFAULT_MOVE_INTERVAL);
+            } <span style="color: #a020f0;">catch</span> (<span style="color: #228b22;">InterruptedException</span> <span style="color: #a0522d;">e</span>) {
+                <span style="color: #a020f0;">break</span>;
+            }
+            <span style="color: #b22222;">// </span><span style="color: #b22222;">&#36827;&#20837;&#28216;&#25103;&#19979;&#19968;&#27493;</span>
+            <span style="color: #b22222;">// </span><span style="color: #b22222;">&#22914;&#26524;&#32467;&#26463;&#65292;&#21017;&#36864;&#20986;&#28216;&#25103;</span>
+            <span style="color: #b22222;">// </span><span style="color: #b22222;">&#22914;&#26524;&#32487;&#32493;&#65292;&#21017;&#32472;&#21046;&#26032;&#30340;&#28216;&#25103;&#39029;&#38754;</span>
+        }
+
+        running = <span style="color: #008b8b;">false</span>;
+    }
+}
+</pre>
+</div>
+
+<p>
+run()函数中的核心逻辑是典型的控制器（Controller）逻辑：
+</p>
+
+<ul class="org-ul">
+<li>修改模型（Model）：调用Grid的方法使游戏进入下一步</li>
+<li>更新视图（View）：调用GameView的方法刷新页面</li>
+</ul>
+
+<p>
+我们可以给GameView增加一个结束游戏时的处理方法，可以在run()方法中调用：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #a020f0;">public</span> <span style="color: #228b22;">void</span> <span style="color: #0000ff;">showGameOverMessage</span>() {
+    JOptionPane.showMessageDialog(<span style="color: #008b8b;">null</span>, <span style="color: #8b2252;">"&#28216;&#25103;&#32467;&#26463;"</span>, <span style="color: #8b2252;">"&#28216;&#25103;&#32467;&#26463;"</span>, <span style="color: #008b8b;">JOptionPane</span>.INFORMATION_MESSAGE);
+}
+</pre>
+</div>
+<p>
+这里简单弹出一个显示游戏结束信息的对话框。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org996bde4" class="outline-3">
+<h3 id="org996bde4"><span class="section-number-3">7.4</span> 启动线程</h3>
+<div class="outline-text-3" id="text-7-4">
+<p>
+如何启动线程呢？在SnakeApp的init()方法中增加一条语句即可：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java">...
+
+gameController = <span style="color: #a020f0;">new</span> <span style="color: #228b22;">GameController</span>(grid, gameView);
+window.addKeyListener(gameController);
+<span style="color: #b22222;">// </span><span style="color: #b22222;">&#21551;&#21160;&#32447;&#31243;</span>
+
+<span style="color: #a020f0;">new</span> <span style="color: #228b22;">Thread</span>(gameController).start();
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: lin chuan</p>
+<p class="date">Created: 2020-04-03 Fri 19:10</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
